@@ -1,12 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://gddh7ovv8vh6"]
+[gd_scene load_steps=8 format=3 uid="uid://gddh7ovv8vh6"]
 
 [ext_resource type="Script" path="res://test1.gd" id="1_1gmaa"]
 [ext_resource type="PackedScene" uid="uid://wo2wtbuyw82k" path="res://scenes/player/player.tscn" id="1_vip6i"]
-[ext_resource type="Texture2D" uid="uid://c84pd1wo2lwn4" path="res://graphics/player/player.png" id="2_ip32d"]
 [ext_resource type="Script" path="res://Area2D.gd" id="4_sa4d1"]
 [ext_resource type="Texture2D" uid="uid://b8dvge4jf68of" path="res://graphics/player/Formation test.png" id="5_ajmol"]
 [ext_resource type="Texture2D" uid="uid://bygi6dnlxnt6h" path="res://graphics/environment/BattleoftheAlmaMap.png" id="6_ynpl1"]
-[ext_resource type="Texture2D" uid="uid://q3xiikdilpf1" path="res://RedcoatRegimentSimplified.png" id="7_tqlnp"]
 
 [sub_resource type="Curve2D" id="Curve2D_vbwyt"]
 _data = {
@@ -21,7 +19,8 @@ size = Vector2(112.26, 255.318)
 script = ExtResource("1_1gmaa")
 
 [node name="BattleoftheAlmaMap" type="Sprite2D" parent="."]
-position = Vector2(1920, 1080)
+position = Vector2(1919.89, 1080)
+scale = Vector2(1, 1)
 texture = ExtResource("6_ynpl1")
 
 [node name="Projectiles" type="Node2D" parent="."]
@@ -55,14 +54,5 @@ shape = SubResource("RectangleShape2D_2lu3b")
 
 [node name="Player" parent="." instance=ExtResource("1_vip6i")]
 position = Vector2(1984, 2096)
-
-[node name="Player2" type="Sprite2D" parent="."]
-position = Vector2(-648, -64)
-texture = ExtResource("2_ip32d")
-
-[node name="RedcoatRegimentSimplified" type="Sprite2D" parent="."]
-position = Vector2(1891, 1541)
-scale = Vector2(0.21, 0.21)
-texture = ExtResource("7_tqlnp")
 
 [connection signal="player_shoot" from="Player" to="." method="_on_player_player_shoot"]
