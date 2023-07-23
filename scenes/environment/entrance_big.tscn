@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://b6qcrdohljiam"]
+
+[ext_resource type="Script" path="res://scenes/environment/entrance_big.gd" id="1_cj00h"]
+[ext_resource type="Texture2D" uid="uid://dne1hh7x648u3" path="res://graphics/environment/entrance_big.png" id="1_pxuwo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l42m0"]
+size = Vector2(430, 138)
+
+[node name="EntranceBig" type="StaticBody2D"]
+script = ExtResource("1_cj00h")
+
+[node name="EntranceBigSprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_pxuwo")
+
+[node name="EntranceBigCollisionPolygon" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-947, -180, -933, 171, -213, 168, -226, 35, 231, 35, 219, 169, 932, 165, 948, -179)
+
+[node name="Door" type="Area2D" parent="."]
+
+[node name="DoorCollisionShape" type="CollisionShape2D" parent="Door"]
+position = Vector2(3, 107)
+shape = SubResource("RectangleShape2D_l42m0")
+
+[connection signal="body_entered" from="Door" to="." method="_on_door_body_entered"]

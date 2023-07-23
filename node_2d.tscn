@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://gddh7ovv8vh6"]
+
+[ext_resource type="PackedScene" uid="uid://wo2wtbuyw82k" path="res://scenes/player/player.tscn" id="1_vip6i"]
+[ext_resource type="Texture2D" uid="uid://c84pd1wo2lwn4" path="res://graphics/player/player.png" id="2_ip32d"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_vip6i")]
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+
+[node name="Player2" type="Sprite2D" parent="."]
+position = Vector2(-816, -8)
+texture = ExtResource("2_ip32d")
