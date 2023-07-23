@@ -23,6 +23,6 @@ func _process(_delta):
 		$Timers/ShootTimer.start()
 		player_shoot.emit(pos,dir)
 
-# Timers
+# Timer
 func _on_shoot_timer_timeout():
 	can_shoot = true
