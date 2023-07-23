@@ -1,13 +1,12 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1690094481
-BattleoftheAlmaMap.png::CompressedTexture2D::921934316831965206::1690094306::1690094290::1::::<><>::
+::res://::1690101803
 icon.svg::CompressedTexture2D::1451486020946167502::1690076033::1690077360::1::::<><>::
-node_2d.tscn::PackedScene::427522549984002265::1690094358::0::1::::<><>::res://test1.gd<>uid://wo2wtbuyw82k::::res://scenes/player/player.tscn<>uid://c84pd1wo2lwn4::::res://graphics/player/player.png<>res://Area2D.gd<>uid://b8dvge4jf68of::::res://graphics/player/Formation test.png<>uid://dwp42hbbwws0::::res://graphics/environment/BattleoftheAlmaMap.png
+node_2d.tscn::PackedScene::427522549984002265::1690101784::0::1::::<><>::res://test1.gd<>uid://wo2wtbuyw82k::::res://scenes/player/player.tscn<>uid://c84pd1wo2lwn4::::res://graphics/player/player.png<>res://Area2D.gd<>uid://b8dvge4jf68of::::res://graphics/player/Formation test.png<>uid://bygi6dnlxnt6h::::res://graphics/environment/BattleoftheAlmaMap.png<>uid://q3xiikdilpf1::::res://RedcoatRegimentSimplified.png
 Area2D.gd::GDScript::-1::1690083875::0::1::::<>Area2D<>::
+RedcoatRegimentSimplified.png::CompressedTexture2D::1182235288289351864::1690101653::1690101973::1::::<><>::
 test1.gd::GDScript::-1::1690078894::0::1::::<>Node2D<>::
-::res://graphics/::1690077361
-BattleoftheAlmaMap.png::CompressedTexture2D::116247584064237233::1690096131::1690096120::1::::<><>::
-::res://graphics/environment/::1690096137
+::res://graphics/::1690101644
+::res://graphics/environment/::1690101648
 BattleoftheAlmaMap.png::CompressedTexture2D::4083880471266987625::1690096137::1690096137::1::::<><>::
 entrance_big.png::CompressedTexture2D::8081566089944037760::1690076138::1690077360::1::::<><>::
 ::res://graphics/objects/::1690076177
@@ -18,10 +17,10 @@ player.png::CompressedTexture2D::7149857674847652087::1690076138::1690077360::1:
 ::res://graphics/projectiles/::1690076179
 bullet.png::CompressedTexture2D::5193418447695514169::1690076138::1690077360::1::::<><>::
 grenade.png::CompressedTexture2D::7369823819015436954::1690076138::1690077360::1::::<><>::
-::res://scenes/::1690086926
-::res://scenes/player/::1690086926
-player.gd::GDScript::-1::1690084547::0::1::::Player<>CharacterBody2D<>::
-player.tscn::PackedScene::1574735495294293012::1690094345::0::1::::<><>::res://scenes/player/player.gd<>uid://b8dvge4jf68of::::res://graphics/player/Formation test.png
-::res://scenes/projectiles/::1690094345
+::res://scenes/::1690096646
+::res://scenes/player/::1690096646
+player.gd::GDScript::-1::1690096291::0::1::::Player<>CharacterBody2D<>::
+player.tscn::PackedScene::1574735495294293012::1690101784::0::1::::<><>::res://scenes/player/player.gd<>uid://b8dvge4jf68of::::res://graphics/player/Formation test.png
+::res://scenes/projectiles/::1690101784
 bullet.gd::GDScript::-1::1690078118::0::1::::<>Area2D<>::
-bullet.tscn::PackedScene::8474199179706317569::1690094345::0::1::::<><>::uid://cf8y3wt36vmuj::::res://graphics/projectiles/bullet.png<>res://scenes/projectiles/bullet.gd
+bullet.tscn::PackedScene::8474199179706317569::1690101784::0::1::::<><>::uid://cf8y3wt36vmuj::::res://graphics/projectiles/bullet.png<>res://scenes/projectiles/bullet.gd
