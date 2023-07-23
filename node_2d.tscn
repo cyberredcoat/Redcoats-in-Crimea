@@ -1,9 +1,19 @@
-[gd_scene load_steps=5 format=3 uid="uid://gddh7ovv8vh6"]
+[gd_scene load_steps=8 format=3 uid="uid://gddh7ovv8vh6"]
 
 [ext_resource type="Script" path="res://test1.gd" id="1_1gmaa"]
 [ext_resource type="PackedScene" uid="uid://wo2wtbuyw82k" path="res://scenes/player/player.tscn" id="1_vip6i"]
 [ext_resource type="Texture2D" uid="uid://c84pd1wo2lwn4" path="res://graphics/player/player.png" id="2_ip32d"]
-[ext_resource type="PackedScene" uid="uid://b7p8f2muqqnku" path="res://scenes/div2/div2.tscn" id="3_2b1mt"]
+[ext_resource type="Script" path="res://Area2D.gd" id="4_sa4d1"]
+[ext_resource type="Texture2D" uid="uid://b8dvge4jf68of" path="res://graphics/player/Formation test.png" id="5_ajmol"]
+
+[sub_resource type="Curve2D" id="Curve2D_5p3et"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 336, 0, -37.9804, 16.8802, 37.9804, -16.8802, 344, -176, 35.3428, 65.4106, -35.3428, -65.4106, 328, -208, 32.4416, 74.9057, -32.4416, -74.9057, 328, -416, 0, 0, 0, 0, 496, -608)
+}
+point_count = 5
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2lu3b"]
+size = Vector2(112.26, 255.318)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_1gmaa")
@@ -15,11 +25,33 @@ script = ExtResource("1_1gmaa")
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(640, -0.00402832)
 
-[node name="Player3" parent="." instance=ExtResource("3_2b1mt")]
-position = Vector2(368, 0)
-
 [node name="Player2" type="Sprite2D" parent="."]
 position = Vector2(-394, -3)
 texture = ExtResource("2_ip32d")
+
+[node name="Path2D" type="Path2D" parent="."]
+rotation = -0.0293651
+curve = SubResource("Curve2D_5p3et")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+unique_name_in_owner = true
+position = Vector2(336, 0)
+rotation = -1.52537
+loop = false
+
+[node name="Area2D" type="Area2D" parent="Path2D/PathFollow2D"]
+unique_name_in_owner = true
+script = ExtResource("4_sa4d1")
+
+[node name="FormationTest" type="Sprite2D" parent="Path2D/PathFollow2D/Area2D"]
+position = Vector2(-1.73425, 8.17377)
+rotation = 1.55474
+scale = Vector2(0.255241, 0.255241)
+texture = ExtResource("5_ajmol")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/Area2D"]
+position = Vector2(-1.21878, 8.67297)
+rotation = 3.12849
+shape = SubResource("RectangleShape2D_2lu3b")
 
 [connection signal="player_shoot" from="Player" to="." method="_on_player_player_shoot"]

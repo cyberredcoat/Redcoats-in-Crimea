@@ -6,3 +6,4 @@ res://scenes/projectiles/bullet.gd
 res://scenes/player/player.tscn
 res://scenes/div2/div2.gd
 res://scenes/div2/div2.tscn
+res://Area2D.gd

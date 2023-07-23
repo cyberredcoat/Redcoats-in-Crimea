@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+class_name Player
+
 signal player_shoot(pos,dir)
 @export var speed: int = 500
 var can_shoot: bool = true
