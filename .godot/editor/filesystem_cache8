@@ -1,0 +1,33 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1690079419
+icon.svg::CompressedTexture2D::1451486020946167502::1690076033::1690077360::1::::<><>::
+node_2d.tscn::PackedScene::427522549984002265::1690078952::0::1::::<><>::res://test1.gd<>uid://wo2wtbuyw82k::::res://scenes/player/player.tscn<>uid://c84pd1wo2lwn4::::res://graphics/player/player.png
+test1.gd::GDScript::-1::1690078894::0::1::::<>Node2D<>::
+::res://graphics/::1690077361
+::res://graphics/environment/::1690077360
+entrance_big.png::CompressedTexture2D::8081566089944037760::1690076138::1690077360::1::::<><>::
+::res://graphics/objects/::1690077360
+desk.png::CompressedTexture2D::2568153164196123969::1690076138::1690077360::1::::<><>::
+::res://graphics/player/::1690077360
+Formation test.png::CompressedTexture2D::4710131683931460365::1690076138::1690077360::1::::<><>::
+player.png::CompressedTexture2D::7149857674847652087::1690076138::1690077360::1::::<><>::
+::res://graphics/projectiles/::1690077360
+bullet.png::CompressedTexture2D::5193418447695514169::1690076138::1690077360::1::::<><>::
+grenade.png::CompressedTexture2D::7369823819015436954::1690076138::1690077360::1::::<><>::
+::res://scenes/::1690079395
+::res://scenes/div2/::1690079419
+div2.gd::GDScript::-1::1690079380::0::1::::Player<>CharacterBody2D<>::
+player.tscn::PackedScene::4665443373750692764::1690079380::0::1::::<><>::res://scenes/player/player.gd<>uid://b8dvge4jf68of
+::res://scenes/environment/::1690076209
+entrance_big.gd::GDScript::-1::1690076163::0::1::::<>StaticBody2D<>::
+entrance_big.tscn::PackedScene::4595456852549400452::1690076163::0::1::::<><>::res://scenes/environment/entrance_big.gd<>uid://dne1hh7x648u3
+::res://scenes/objects/::1690076209
+desk.tscn::PackedScene::8021926378489164574::1690076163::0::1::::<><>::uid://bcubdwfl0jd3f
+::res://scenes/player/::1690079059
+player.gd::GDScript::-1::1690077603::0::1::::Player<>CharacterBody2D<>::
+player.tscn::PackedScene::1574735495294293012::1690078952::0::1::::<><>::res://scenes/player/player.gd<>uid://b8dvge4jf68of::::res://graphics/player/Formation test.png
+::res://scenes/projectiles/::1690079055
+bullet.gd::GDScript::-1::1690078118::0::1::::<>Area2D<>::
+bullet.tscn::PackedScene::8474199179706317569::1690078952::0::1::::<><>::uid://cf8y3wt36vmuj::::res://graphics/projectiles/bullet.png<>res://scenes/projectiles/bullet.gd
+grenade.gd::GDScript::-1::1690076163::0::1::::<>RigidBody2D<>::
+grenade.tscn::PackedScene::829365215421367801::1690076163::0::1::::<><>::uid://dc886lk1neekg

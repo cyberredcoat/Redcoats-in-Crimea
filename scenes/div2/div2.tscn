@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://b7p8f2muqqnku"]
+
+[ext_resource type="Script" path="res://scenes/player/player.gd" id="1_dlkdl"]
+[ext_resource type="Texture2D" uid="uid://b8dvge4jf68of" path="res://graphics/player/Formation test.png" id="2_2hg0b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_so4y2"]
+size = Vector2(22.4001, 50.8)
+
+[node name="Player" type="CharacterBody2D"]
+rotation = -1.57079
+script = ExtResource("1_dlkdl")
+
+[node name="ShootStart" type="Marker2D" parent="."]
+position = Vector2(56.0001, 7.99965)
+rotation = 0.0504976
+
+[node name="PlayerCollisionShape" type="CollisionShape2D" parent="."]
+position = Vector2(7.62939e-06, 7.62939e-06)
+scale = Vector2(5, 5)
+shape = SubResource("RectangleShape2D_so4y2")
+
+[node name="FormationTest" type="Sprite2D" parent="."]
+position = Vector2(0.0055542, -0.0101318)
+rotation = 1.57413
+scale = Vector2(0.259909, 0.259887)
+texture = ExtResource("2_2hg0b")

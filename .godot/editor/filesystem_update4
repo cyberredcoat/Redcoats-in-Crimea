@@ -1,0 +1,8 @@
+res://scenes/player/player.gd
+res://node_2d.tscn
+res://test1.gd
+res://scenes/projectiles/bullet.tscn
+res://scenes/projectiles/bullet.gd
+res://scenes/player/player.tscn
+res://scenes/div2/div2.gd
+res://scenes/div2/div2.tscn

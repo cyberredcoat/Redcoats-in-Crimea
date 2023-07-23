@@ -4,18 +4,18 @@
 [ext_resource type="Texture2D" uid="uid://b8dvge4jf68of" path="res://graphics/player/Formation test.png" id="2_aspvw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_so4y2"]
-size = Vector2(39.2, 98.4)
+size = Vector2(22.4001, 50.8)
 
 [node name="Player" type="CharacterBody2D"]
 rotation = -1.57079
 script = ExtResource("1_jrax3")
 
 [node name="ShootStart" type="Marker2D" parent="."]
-position = Vector2(136, 15.9992)
+position = Vector2(56.0001, 7.99965)
 rotation = 0.0504976
 
 [node name="PlayerCollisionShape" type="CollisionShape2D" parent="."]
-position = Vector2(-4.76837e-07, 0)
+position = Vector2(7.62939e-06, 7.62939e-06)
 scale = Vector2(5, 5)
 shape = SubResource("RectangleShape2D_so4y2")
 
@@ -26,9 +26,9 @@ wait_time = 0.25
 one_shot = true
 
 [node name="FormationTest" type="Sprite2D" parent="."]
-position = Vector2(4.99887, -2.0002)
+position = Vector2(0.0055542, -0.0101318)
 rotation = 1.57413
-scale = Vector2(0.4996, 0.499557)
+scale = Vector2(0.259909, 0.259887)
 texture = ExtResource("2_aspvw")
 
 [connection signal="timeout" from="Timers/ShootTimer" to="." method="_on_shoot_timer_timeout"]
