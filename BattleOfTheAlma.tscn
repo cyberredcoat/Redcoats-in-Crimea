@@ -1,9 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://gddh7ovv8vh6"]
+[gd_scene load_steps=8 format=3 uid="uid://co88tfdxmlknv"]
 
-[ext_resource type="Script" path="res://test1.gd" id="1_1gmaa"]
-[ext_resource type="PackedScene" uid="uid://wo2wtbuyw82k" path="res://scenes/player/player.tscn" id="1_vip6i"]
-[ext_resource type="Script" path="res://Area2D.gd" id="4_sa4d1"]
-[ext_resource type="Texture2D" uid="uid://bygi6dnlxnt6h" path="res://graphics/environment/BattleoftheAlmaMap.png" id="6_ynpl1"]
+[ext_resource type="Script" path="res://test1.gd" id="1_mm6qv"]
+[ext_resource type="Texture2D" uid="uid://bygi6dnlxnt6h" path="res://graphics/environment/BattleoftheAlmaMap.png" id="2_xwq6i"]
+[ext_resource type="Script" path="res://Area2D.gd" id="3_to5d8"]
+[ext_resource type="PackedScene" uid="uid://wo2wtbuyw82k" path="res://scenes/player/player.tscn" id="4_dbigv"]
 
 [sub_resource type="Curve2D" id="Curve2D_vbwyt"]
 _data = {
@@ -17,11 +17,11 @@ point_count = 18
 size = Vector2(112.26, 255.318)
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource("1_1gmaa")
+script = ExtResource("1_mm6qv")
 
 [node name="BattleoftheAlmaMap" type="Sprite2D" parent="."]
 position = Vector2(1919.89, 1080)
-texture = ExtResource("6_ynpl1")
+texture = ExtResource("2_xwq6i")
 
 [node name="Projectiles" type="Node2D" parent="."]
 
@@ -39,7 +39,7 @@ loop = false
 [node name="Area2D" type="Area2D" parent="Path2D/PathFollow2D"]
 unique_name_in_owner = true
 position = Vector2(-559.755, -18.3948)
-script = ExtResource("4_sa4d1")
+script = ExtResource("3_to5d8")
 
 [node name="FormationTest" type="Sprite2D" parent="Path2D/PathFollow2D/Area2D"]
 position = Vector2(-1.73425, 8.17377)
@@ -52,7 +52,7 @@ position = Vector2(-1.21878, 8.67297)
 rotation = 3.12849
 shape = SubResource("RectangleShape2D_2lu3b")
 
-[node name="Player" parent="." instance=ExtResource("1_vip6i")]
+[node name="Player" parent="." instance=ExtResource("4_dbigv")]
 position = Vector2(1984, 2096)
 
 [connection signal="player_shoot" from="Player" to="." method="_on_player_player_shoot"]
