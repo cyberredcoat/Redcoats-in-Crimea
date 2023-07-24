@@ -1,8 +1,8 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1690118375
-icon.svg::CompressedTexture2D::1451486020946167502::1690076033::1690077360::1::::<><>::
-node_2d.tscn::PackedScene::427522549984002265::1690118217::0::1::::<><>::res://test1.gd<>uid://wo2wtbuyw82k::::res://scenes/player/player.tscn<>res://Area2D.gd<>uid://b8dvge4jf68of::::res://graphics/player/Formation test.png<>uid://bygi6dnlxnt6h::::res://graphics/environment/BattleoftheAlmaMap.png
+::res://::1690181337
 Area2D.gd::GDScript::-1::1690083875::0::1::::<>Area2D<>::
+icon.svg::CompressedTexture2D::1451486020946167502::1690076033::1690077360::1::::<><>::
+node_2d.tscn::PackedScene::427522549984002265::1690118452::0::1::::<><>::res://test1.gd<>uid://wo2wtbuyw82k::::res://scenes/player/player.tscn<>res://Area2D.gd<>uid://b8dvge4jf68of::::res://graphics/player/Formation test.png<>uid://bygi6dnlxnt6h::::res://graphics/environment/BattleoftheAlmaMap.png
 RedcoatRegimentSimplified.png::CompressedTexture2D::2297410677383421155::1690118375::1690118375::1::::<><>::
 test1.gd::GDScript::-1::1690078894::0::1::::<>Node2D<>::
 ::res://graphics/::1690101644
@@ -17,10 +17,10 @@ player.png::CompressedTexture2D::7149857674847652087::1690076138::1690077360::1:
 ::res://graphics/projectiles/::1690076179
 bullet.png::CompressedTexture2D::5193418447695514169::1690076138::1690077360::1::::<><>::
 grenade.png::CompressedTexture2D::7369823819015436954::1690076138::1690077360::1::::<><>::
-::res://scenes/::1690096646
-::res://scenes/player/::1690096646
+::res://scenes/::1690118449
+::res://scenes/player/::1690118449
 player.gd::GDScript::-1::1690096291::0::1::::Player<>CharacterBody2D<>::
-player.tscn::PackedScene::1574735495294293012::1690118217::0::1::::<><>::res://scenes/player/player.gd<>uid://bn8uwpbucuogj::::res://RedcoatRegimentSimplified.png
-::res://scenes/projectiles/::1690118217
+player.tscn::PackedScene::1574735495294293012::1690118452::0::1::::<><>::res://scenes/player/player.gd<>uid://7y5avbmef2vf::::res://RedcoatRegimentSimplified.png
+::res://scenes/projectiles/::1690118452
 bullet.gd::GDScript::-1::1690078118::0::1::::<>Area2D<>::
-bullet.tscn::PackedScene::8474199179706317569::1690118217::0::1::::<><>::uid://cf8y3wt36vmuj::::res://graphics/projectiles/bullet.png<>res://scenes/projectiles/bullet.gd
+bullet.tscn::PackedScene::8474199179706317569::1690118452::0::1::::<><>::uid://cf8y3wt36vmuj::::res://graphics/projectiles/bullet.png<>res://scenes/projectiles/bullet.gd

@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://7y5avbmef2vf" path="res://RedcoatRegimentSimplified.png" id="2_mw8ku"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_so4y2"]
-size = Vector2(27.2001, 112)
+size = Vector2(20.8, 99.2)
 
 [node name="Player" type="CharacterBody2D"]
 rotation = -1.57079
@@ -15,7 +15,7 @@ position = Vector2(56.0001, 7.99965)
 rotation = 0.0504976
 
 [node name="PlayerCollisionShape" type="CollisionShape2D" parent="."]
-position = Vector2(2.38419e-07, -1.49593e-12)
+position = Vector2(-12, 1.57277e-07)
 scale = Vector2(5, 5)
 shape = SubResource("RectangleShape2D_so4y2")
 
@@ -27,6 +27,7 @@ one_shot = true
 
 [node name="RedcoatRegimentSimplified" type="Sprite2D" parent="."]
 rotation = 1.56994
+scale = Vector2(0.897712, 0.897712)
 texture = ExtResource("2_mw8ku")
 
 [connection signal="timeout" from="Timers/ShootTimer" to="." method="_on_shoot_timer_timeout"]
