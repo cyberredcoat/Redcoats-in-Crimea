@@ -1,3 +1,6 @@
+Timer
+AnimationPlayer
+AnimatedSprite2D
 Path2D
 CollisionShape2D
 Area2D

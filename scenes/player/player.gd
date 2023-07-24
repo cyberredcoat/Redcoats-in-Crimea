@@ -6,6 +6,9 @@ signal player_shoot(pos,dir)
 @export var speed: int = 30
 var can_shoot: bool = true
 
+func _ready():
+	$RedcoatRegAni/AnimationPlayer.play("BayonetSide")
+
 func _process(_delta):
 	# Variables
 	var direction: Vector2 = Input.get_vector("left","right","front","back")
@@ -19,10 +22,17 @@ func _process(_delta):
 	# Shoot
 	if Input.is_action_pressed("fire") and can_shoot:
 		print("Fire!")
+		$RedcoatRegAni/AnimationPlayer.play("Fire")
 		can_shoot = false
 		$Timers/ShootTimer.start()
+		$Timers/FireTimer.start()
 		player_shoot.emit(pos,dir)
+		
 
 # Timer
 func _on_shoot_timer_timeout():
 	can_shoot = true
+
+
+func _on_fire_timer_timeout():
+	$RedcoatRegAni/AnimationPlayer.play("BayonetFront")

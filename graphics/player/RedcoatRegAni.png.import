@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dc886lk1neekg"
-path="res://.godot/imported/grenade.png-95dea2d75e217e10d9d1ca6a21798d58.ctex"
+uid="uid://co02fqp267hgq"
+path="res://.godot/imported/RedcoatRegAni.png-1388f9f25e55772dddfae08b5f6ae52c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/projectiles/grenade.png"
-dest_files=["res://.godot/imported/grenade.png-95dea2d75e217e10d9d1ca6a21798d58.ctex"]
+source_file="res://graphics/player/RedcoatRegAni.png"
+dest_files=["res://.godot/imported/RedcoatRegAni.png-1388f9f25e55772dddfae08b5f6ae52c.ctex"]
 
 [params]
 
