@@ -1,7 +1,7 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1690198844
+::res://::1690270936
 Area2D.gd::GDScript::-1::1690083875::0::1::::<>Area2D<>::
-BattleOfTheAlma.tscn::PackedScene::5825647503360773551::1690198740::0::1::::<><>::res://test1.gd<>uid://bygi6dnlxnt6h::::res://graphics/environment/BattleoftheAlmaMap.png<>res://Area2D.gd<>uid://wo2wtbuyw82k::::res://scenes/player/player.tscn
+BattleOfTheAlma.tscn::PackedScene::5825647503360773551::1690198740::0::1::::<><>::res://test1.gd<>uid://bygi6dnlxnt6h
 icon.svg::CompressedTexture2D::1451486020946167502::1690076033::1690077360::1::::<><>::
 node_2d.tscn::PackedScene::427522549984002265::1690198728::0::1::::<><>::res://test1.gd<>uid://wo2wtbuyw82k::::res://scenes/player/player.tscn<>res://Area2D.gd<>uid://bygi6dnlxnt6h::::res://graphics/environment/BattleoftheAlmaMap.png
 test1.gd::GDScript::-1::1690078894::0::1::::<>Node2D<>::

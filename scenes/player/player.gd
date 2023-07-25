@@ -3,7 +3,7 @@ extends CharacterBody2D
 class_name Player
 
 signal player_shoot(pos,dir)
-@export var speed: int = 30
+@export var speed: int = 300
 var can_shoot: bool = true
 
 func _ready():
