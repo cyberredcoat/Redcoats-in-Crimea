@@ -1,56 +1,35 @@
-[gd_scene load_steps=8 format=3 uid="uid://co88tfdxmlknv"]
+[gd_scene load_steps=7 format=3 uid="uid://co88tfdxmlknv"]
 
-[ext_resource type="Script" path="res://test1.gd" id="1_mm6qv"]
+[ext_resource type="Script" path="res://BattleOfTheAlma.gd" id="1_1o6i7"]
 [ext_resource type="Texture2D" uid="uid://bygi6dnlxnt6h" path="res://graphics/environment/BattleoftheAlmaMap.png" id="2_xwq6i"]
-[ext_resource type="Script" path="res://Area2D.gd" id="3_to5d8"]
+[ext_resource type="Script" path="res://RussianRegAlma.gd" id="3_8toaw"]
+[ext_resource type="PackedScene" uid="uid://cqvd3a3cj3ktu" path="res://scenes/player/RussianReg.tscn" id="4_3sux0"]
 [ext_resource type="PackedScene" uid="uid://cpm1ldb8ohnws" path="res://scenes/player/BritishReg.tscn" id="4_5lqtq"]
 
-[sub_resource type="Curve2D" id="Curve2D_vbwyt"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 2864, 1472, 0, 0, 0, 0, 2824, 624, 0, 0, 0, 0, 2304, 480, 0, 0, 0, 0, 1888, 712, 0, 0, 0, 0, 1576, 600, 0, 0, 0, 0, 1600, 984, 0, 0, 0, 0, 1560, 1344, 0, 0, 0, 0, 1008, 688, 0, 0, 0, 0, 1248, 1424, 0, 0, 0, 0, 2728, 1824, 0, 0, 0, 0, 2864, 1848, 0, 0, 0, 0, 2888, 1936, 0, 0, 0, 0, 3280, 1744, 0, 0, 0, 0, 2928, 2248, 0, 0, 0, 0, 3712, 1536, 0, 0, 0, 0, 2840, 984, 0, 0, 0, 0, 192, 1504, 0, 0, 0, 0, -256, 1528)
-}
-point_count = 18
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fmgc0"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2lu3b"]
-size = Vector2(112.26, 255.318)
+[sub_resource type="Curve2D" id="Curve2D_uyk1j"]
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource("1_mm6qv")
+script = ExtResource("1_1o6i7")
 
 [node name="BattleoftheAlmaMap" type="Sprite2D" parent="."]
 position = Vector2(1919.89, 1080)
 texture = ExtResource("2_xwq6i")
 
 [node name="Projectiles" type="Node2D" parent="."]
+position = Vector2(1680, 616)
+rotation = -1.77829
+scale = Vector2(1, 1)
+
+[node name="Player" parent="." instance=ExtResource("4_5lqtq")]
+position = Vector2(1880, 1664)
 
 [node name="Path2D" type="Path2D" parent="."]
-visible = false
-position = Vector2(-8, 0)
-curve = SubResource("Curve2D_vbwyt")
+curve = SubResource("Curve2D_uyk1j")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
 unique_name_in_owner = true
-position = Vector2(2864, 1472)
-rotation = -1.61793
-loop = false
 
 [node name="Area2D" type="Area2D" parent="Path2D/PathFollow2D"]
-unique_name_in_owner = true
-position = Vector2(-559.755, -18.3948)
-script = ExtResource("3_to5d8")
+script = ExtResource("3_8toaw")
 
-[node name="FormationTest" type="Sprite2D" parent="Path2D/PathFollow2D/Area2D"]
-position = Vector2(-1.73425, 8.17377)
-rotation = 1.55474
-scale = Vector2(0.255241, 0.255241)
-texture = SubResource("CompressedTexture2D_fmgc0")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/Area2D"]
-position = Vector2(-1.21878, 8.67297)
-rotation = 3.12849
-shape = SubResource("RectangleShape2D_2lu3b")
-
-[node name="Player" parent="." instance=ExtResource("4_5lqtq")]
-position = Vector2(1976, 2032)
+[node name="RussianReg" parent="Path2D/PathFollow2D/Area2D" instance=ExtResource("4_3sux0")]
