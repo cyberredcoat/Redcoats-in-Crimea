@@ -13,9 +13,9 @@ func _on_player_player_shoot(pos,dir):
 	fire.rotation_degrees = rad_to_deg(dir.angle()) + 90
 	$Projectiles.add_child(fire)
 
-func _on_russian_reg_russian_shoot(pos, dir):
+func _on_russian_reg_russian_shoot(posi, dir):
 	var enemyFire = enemyFireScene.instantiate() as Area2D
-	enemyFire.position = pos
+	enemyFire.position = posi
 	enemyFire.direction = dir
 	enemyFire.rotation_degrees = rad_to_deg(dir.angle()) + 90
 	$ProjectilesEnemy.add_child(enemyFire)
