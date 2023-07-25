@@ -6,6 +6,7 @@ signal player_shoot(pos,dir)
 signal playerPos(pos,dir)
 @export var speed: int = 20
 var can_shoot: bool = true
+var health = 100
 
 func _ready():
 	$RedcoatRegAni/AnimationPlayer.play("BayonetSide")
@@ -26,6 +27,12 @@ func _process(_delta):
 		can_shoot = false
 		$Timers/FireTimer.start()
 		player_shoot.emit(pos,dir)
+	
+func take_damage():
+	health -= 100
+	if health == 0:
+		queue_free()
+		get_tree().reload_current_scene()
 
 func _on_fire_timer_timeout():
 	$RedcoatRegAni/AnimationPlayer.play("BayonetFront")

@@ -6,3 +6,5 @@ res://scenes/projectiles/bullet.tscn
 res://BattleOfTheAlma.gd
 res://scenes/player/RussianReg.gd
 res://scenes/player/BritishReg.gd
+res://scenes/projectilesEnemy/bullet.tscn
+res://scenes/projectiles/bullet.gd

@@ -41,6 +41,13 @@ position = Vector2(1880, 1664)
 position = Vector2(1768, 728)
 rotation = -3.13814
 
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = 64.0
+offset_top = 192.0
+offset_right = 193.0
+offset_bottom = 832.0
+show_percentage = false
+
 [connection signal="playerPos" from="Player" to="RussianReg" method="_on_player_player_pos"]
 [connection signal="player_shoot" from="Player" to="." method="_on_player_player_shoot"]
 [connection signal="russianShoot" from="RussianReg" to="." method="_on_russian_reg_2_russian_shoot"]
