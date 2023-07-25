@@ -78,10 +78,6 @@ debug_color = Color(0, 0.6, 0.701961, 0.419608)
 
 [node name="Timers" type="Node2D" parent="."]
 
-[node name="ShootTimer" type="Timer" parent="Timers"]
-wait_time = 0.25
-one_shot = true
-
 [node name="FireTimer" type="Timer" parent="Timers"]
 wait_time = 0.7
 
@@ -98,5 +94,4 @@ libraries = {
 "": SubResource("AnimationLibrary_hs2gb")
 }
 
-[connection signal="timeout" from="Timers/ShootTimer" to="." method="_on_shoot_timer_timeout"]
 [connection signal="timeout" from="Timers/FireTimer" to="." method="_on_fire_timer_timeout"]

@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://cqvd3a3cj3ktu"]
+[gd_scene load_steps=9 format=3 uid="uid://cqvd3a3cj3ktu"]
 
+[ext_resource type="Script" path="res://scenes/player/RussianReg.gd" id="1_0ryfc"]
 [ext_resource type="Texture2D" uid="uid://bhuv5rfa1aamb" path="res://graphics/player/RussianRegAni.png" id="1_uv3i3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xbsil"]
@@ -62,7 +63,12 @@ _data = {
 "RESET": SubResource("Animation_sn4ok")
 }
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="RussianReg" type="CharacterBody2D"]
+script = ExtResource("1_0ryfc")
+
+[node name="ShootStart" type="Marker2D" parent="."]
+position = Vector2(5.1799e-07, -24)
+rotation = -1.56907
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.0703926, 31.9999)
@@ -71,16 +77,13 @@ shape = SubResource("RectangleShape2D_xbsil")
 
 [node name="Timers" type="Node2D" parent="."]
 
-[node name="ShootTimer" type="Timer" parent="Timers"]
-wait_time = 0.25
-one_shot = true
-
 [node name="FireTimer" type="Timer" parent="Timers"]
 wait_time = 0.7
+autostart = true
 
-[node name="ShootStart" type="Marker2D" parent="."]
-position = Vector2(0, -24)
-rotation = -1.57215
+[node name="FireableTimer" type="Timer" parent="Timers"]
+wait_time = 2.0
+autostart = true
 
 [node name="RussianRegAni" type="Sprite2D" parent="."]
 texture = ExtResource("1_uv3i3")
@@ -91,3 +94,6 @@ unique_name_in_owner = true
 libraries = {
 "": SubResource("AnimationLibrary_hs2gb")
 }
+
+[connection signal="timeout" from="Timers/FireTimer" to="." method="_on_fire_timer_timeout"]
+[connection signal="timeout" from="Timers/FireableTimer" to="." method="_on_fireable_timer_timeout"]

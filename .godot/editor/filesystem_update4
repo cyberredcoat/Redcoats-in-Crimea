@@ -8,3 +8,7 @@ res://scenes/player/RussianReg.tscn
 res://Area2D.gd
 res://RussianRegAlma.gd
 res://scenes/player/BritishReg.gd
+res://scenes/player/RussianReg.gd
+res://BattleOfTheAlma.gd
+res://scenes/projectiles/bullet.tscn
+res://scenes/projectiles/bullet.gd

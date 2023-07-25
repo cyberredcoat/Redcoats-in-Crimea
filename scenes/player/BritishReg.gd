@@ -3,7 +3,7 @@ extends CharacterBody2D
 class_name Player
 
 signal player_shoot(pos,dir)
-@export var speed: int = 40
+@export var speed: int = 20
 var can_shoot: bool = true
 
 func _ready():
@@ -24,15 +24,9 @@ func _process(_delta):
 		print("Fire!")
 		$RedcoatRegAni/AnimationPlayer.play("Fire")
 		can_shoot = false
-		$Timers/ShootTimer.start()
 		$Timers/FireTimer.start()
 		player_shoot.emit(pos,dir)
-		
-
-# Timer
-func _on_shoot_timer_timeout():
-	can_shoot = true
-
 
 func _on_fire_timer_timeout():
 	$RedcoatRegAni/AnimationPlayer.play("BayonetFront")
+	can_shoot = true
