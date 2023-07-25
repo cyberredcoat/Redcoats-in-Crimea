@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://co88tfdxmlknv"]
+[gd_scene load_steps=8 format=3 uid="uid://co88tfdxmlknv"]
 
 [ext_resource type="Script" path="res://test1.gd" id="1_mm6qv"]
 [ext_resource type="Texture2D" uid="uid://bygi6dnlxnt6h" path="res://graphics/environment/BattleoftheAlmaMap.png" id="2_xwq6i"]
@@ -15,12 +15,6 @@ point_count = 18
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2lu3b"]
 size = Vector2(112.26, 255.318)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_atghg"]
-size = Vector2(1208, 3920)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_mlvpm"]
-size = Vector2(3840, 880)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_mm6qv")
@@ -58,26 +52,5 @@ position = Vector2(-1.21878, 8.67297)
 rotation = 3.12849
 shape = SubResource("RectangleShape2D_2lu3b")
 
-[node name="Area2D3" type="Area2D" parent="."]
-position = Vector2(520, 2952)
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Area2D3"]
-position = Vector2(-1124, -1864)
-shape = SubResource("RectangleShape2D_atghg")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D3"]
-position = Vector2(3928, -1872)
-shape = SubResource("RectangleShape2D_atghg")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D3"]
-position = Vector2(1400, -3392)
-shape = SubResource("RectangleShape2D_mlvpm")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3"]
-position = Vector2(1400, -352)
-shape = SubResource("RectangleShape2D_mlvpm")
-
 [node name="Player" parent="." instance=ExtResource("4_5lqtq")]
 position = Vector2(1976, 2032)
-
-[connection signal="body_entered" from="Area2D3" to="." method="_on_area_2d_3_body_entered"]

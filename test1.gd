@@ -11,8 +11,3 @@ func _on_player_player_shoot(pos,dir):
 	bullet.direction = dir
 	bullet.rotation_degrees = rad_to_deg(dir.angle()) + 90
 	$Projectiles.add_child(bullet)
-
-
-func _on_area_2d_3_body_entered(body):
-	get_tree().reload_current_scene()
-	pass
