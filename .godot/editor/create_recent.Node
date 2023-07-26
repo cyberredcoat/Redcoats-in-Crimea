@@ -1,9 +1,9 @@
+Timer
 ProgressBar
+Area2D
 CharacterBody2D
 CollisionShape2D
-Area2D
 Node2D
-Timer
 PathFollow2D
 Path2D
 ShapeCast2D

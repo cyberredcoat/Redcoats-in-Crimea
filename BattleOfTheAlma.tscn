@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://co88tfdxmlknv"]
+[gd_scene load_steps=7 format=3 uid="uid://co88tfdxmlknv"]
 
 [ext_resource type="Script" path="res://BattleOfTheAlma.gd" id="1_1o6i7"]
 [ext_resource type="Texture2D" uid="uid://bygi6dnlxnt6h" path="res://graphics/environment/BattleoftheAlmaMap.png" id="2_xwq6i"]
 [ext_resource type="PackedScene" uid="uid://cpm1ldb8ohnws" path="res://scenes/player/BritishReg.tscn" id="4_5lqtq"]
 [ext_resource type="PackedScene" uid="uid://cqvd3a3cj3ktu" path="res://scenes/player/RussianReg.tscn" id="5_13ojy"]
+[ext_resource type="Script" path="res://RussianHealthBar.gd" id="5_gfq44"]
+[ext_resource type="Script" path="res://HealthBar.gd" id="6_qqr7m"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_1o6i7")
@@ -35,20 +37,43 @@ unique_name_in_owner = true
 
 [node name="Player" parent="." instance=ExtResource("4_5lqtq")]
 unique_name_in_owner = true
-position = Vector2(1880, 1664)
+position = Vector2(1872, 1688)
 
 [node name="RussianReg" parent="." instance=ExtResource("5_13ojy")]
 position = Vector2(1768, 728)
 rotation = -3.13814
 
-[node name="ProgressBar" type="ProgressBar" parent="."]
+[node name="RussianHealthBar" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+modulate = Color(1, 0, 0, 1)
+self_modulate = Color(1, 0, 0, 1)
+light_mask = 1023
+visibility_layer = 1023
 offset_left = 64.0
-offset_top = 192.0
-offset_right = 193.0
-offset_bottom = 832.0
+offset_top = 152.0
+offset_right = 384.0
+offset_bottom = 216.0
+value = 100.0
 show_percentage = false
+script = ExtResource("5_gfq44")
 
+[node name="HealthBar" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+modulate = Color(0, 1, 0, 1)
+self_modulate = Color(0, 1, 0, 1)
+light_mask = 1023
+visibility_layer = 1023
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 384.0
+offset_bottom = 128.0
+value = 100.0
+show_percentage = false
+script = ExtResource("6_qqr7m")
+
+[connection signal="healthSignal" from="Player" to="HealthBar" method="_on_player_health_signal"]
 [connection signal="playerPos" from="Player" to="RussianReg" method="_on_player_player_pos"]
 [connection signal="player_shoot" from="Player" to="." method="_on_player_player_shoot"]
+[connection signal="russianHealthSignal" from="RussianReg" to="RussianHealthBar" method="_on_russian_reg_russian_health_signal"]
 [connection signal="russianShoot" from="RussianReg" to="." method="_on_russian_reg_2_russian_shoot"]
 [connection signal="russianShoot" from="RussianReg" to="." method="_on_russian_reg_russian_shoot"]
