@@ -85,6 +85,10 @@ debug_color = Color(0, 0.6, 0.701961, 0.419608)
 wait_time = 0.7
 
 [node name="HealthTimer" type="Timer" parent="Timers"]
+autostart = true
+
+[node name="FireableTimer" type="Timer" parent="Timers"]
+wait_time = 1.5
 
 [node name="RedcoatRegAni" type="Sprite2D" parent="."]
 position = Vector2(24, -2.00015)
@@ -102,3 +106,4 @@ libraries = {
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="timeout" from="Timers/FireTimer" to="." method="_on_fire_timer_timeout"]
 [connection signal="timeout" from="Timers/HealthTimer" to="." method="_on_health_timer_timeout"]
+[connection signal="timeout" from="Timers/FireableTimer" to="." method="_on_fireable_timer_timeout"]

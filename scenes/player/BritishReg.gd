@@ -28,20 +28,21 @@ func _process(_delta):
 		can_shoot = false
 		$Timers/FireTimer.start()
 		player_shoot.emit(pos,dir)
+		$Timers/FireableTimer.start()
 
 func _on_fire_timer_timeout():
 	$RedcoatRegAni/AnimationPlayer.play("BayonetFront")
+	
+func _on_fireable_timer_timeout():
 	can_shoot = true
 
 func _on_area_2d_area_entered(area):
 	health -= 1
 	healthSignal.emit(health)
-	
 	if health == 0:
 		get_tree().reload_current_scene()
 	if health <= 0:
 		get_tree().reload_current_scene()
-
 
 func _on_health_timer_timeout():
 	health -= 0.1
