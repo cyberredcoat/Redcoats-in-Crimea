@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cf8y3wt36vmuj"
-path="res://.godot/imported/bullet.png-5e34abc702f6b3a997f480cc74b12570.ctex"
+uid="uid://3vfhpomweau2"
+path="res://.godot/imported/BattleofInkermanMap.png-2df886a0ceffce8eb34df5377eb99b5f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/projectiles/bullet.png"
-dest_files=["res://.godot/imported/bullet.png-5e34abc702f6b3a997f480cc74b12570.ctex"]
+source_file="res://graphics/environment/BattleofInkermanMap.png"
+dest_files=["res://.godot/imported/BattleofInkermanMap.png-2df886a0ceffce8eb34df5377eb99b5f.ctex"]
 
 [params]
 

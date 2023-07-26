@@ -10,3 +10,4 @@ res://scenes/projectilesEnemy/bullet.tscn
 res://scenes/projectiles/bullet.gd
 res://RussianHealthBar.gd
 res://HealthBar.gd
+res://BattleOfInkerman.tscn
