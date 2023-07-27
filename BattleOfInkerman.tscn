@@ -10,7 +10,7 @@
 [ext_resource type="Script" path="res://scenes/player/HealthBar.gd" id="6_w3ark"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ea1v4"]
-size = Vector2(1360, 877)
+size = Vector2(1360, 1014.5)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_5d081")
@@ -39,7 +39,7 @@ script = ExtResource("5_4whuq")
 position = Vector2(-168, 688)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(2184, 422.5)
+position = Vector2(2096, 380.75)
 shape = SubResource("RectangleShape2D_ea1v4")
 one_way_collision_margin = 0.0
 
