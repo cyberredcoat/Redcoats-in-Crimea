@@ -1,7 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://cmc2ug8lkewei"]
+[gd_scene load_steps=10 format=3 uid="uid://cmc2ug8lkewei"]
 
 [ext_resource type="Script" path="res://BattlesScene.gd" id="1_5d081"]
-[ext_resource type="Texture2D" uid="uid://3vfhpomweau2" path="res://graphics/environment/BattleofInkermanMap.png" id="2_r1yuf"]
+[ext_resource type="Texture2D" uid="uid://cfg0jawfbyf65" path="res://graphics/environment/BattleofInkermanMap.png" id="2_r1yuf"]
+[ext_resource type="PackedScene" uid="uid://dofde0twb7iyy" path="res://scenes/player/RussianInkermanReg.tscn" id="3_1cefl"]
+[ext_resource type="PackedScene" uid="uid://c73awthrska8c" path="res://scenes/player/BritishGreyReg.tscn" id="4_mcoew"]
+[ext_resource type="Script" path="res://scenes/player/BritishGreyReg.gd" id="5_4whuq"]
+[ext_resource type="Script" path="res://scenes/player/RussianHealthBar.gd" id="5_au43p"]
+[ext_resource type="Texture2D" uid="uid://bifnj2hr3qrhp" path="res://graphics/environment/BattleofInkermanFogMap.png" id="5_denej"]
+[ext_resource type="Script" path="res://scenes/player/HealthBar.gd" id="6_w3ark"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ea1v4"]
+size = Vector2(1360, 877)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_5d081")
@@ -15,3 +24,62 @@ unique_name_in_owner = true
 
 [node name="Projectiles" type="Node2D" parent="."]
 unique_name_in_owner = true
+
+[node name="RussianReg" parent="." instance=ExtResource("3_1cefl")]
+position = Vector2(1480, 192)
+rotation = 3.11702
+scale = Vector2(0.793686, 0.793686)
+
+[node name="Player" parent="." instance=ExtResource("4_mcoew")]
+position = Vector2(1776, 1264)
+scale = Vector2(0.795783, 0.795783)
+script = ExtResource("5_4whuq")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-168, 688)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(2184, 422.5)
+shape = SubResource("RectangleShape2D_ea1v4")
+one_way_collision_margin = 0.0
+
+[node name="BattleofInkermanFogMap" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.784314)
+position = Vector2(1920, 1080)
+texture = ExtResource("5_denej")
+
+[node name="RussianHealthBar" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+modulate = Color(1, 0, 0, 1)
+self_modulate = Color(1, 0, 0, 1)
+light_mask = 1023
+visibility_layer = 1023
+offset_left = 64.0
+offset_top = 152.0
+offset_right = 384.0
+offset_bottom = 216.0
+value = 100.0
+show_percentage = false
+script = ExtResource("5_au43p")
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+modulate = Color(0, 1, 0, 1)
+self_modulate = Color(0, 1, 0, 1)
+light_mask = 1023
+visibility_layer = 1023
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 384.0
+offset_bottom = 128.0
+max_value = 200.0
+value = 200.0
+show_percentage = false
+script = ExtResource("6_w3ark")
+
+[connection signal="russianHealthSignal" from="RussianReg" to="RussianHealthBar" method="_on_russian_reg_russian_health_signal"]
+[connection signal="russianShoot" from="RussianReg" to="." method="_on_russian_reg_russian_shoot"]
+[connection signal="healthSignal" from="Player" to="HealthBar" method="_on_player_health_signal"]
+[connection signal="player_shoot" from="Player" to="." method="_on_player_player_shoot"]
+[connection signal="area_entered" from="Area2D" to="Player" method="_on_area_2d_mt_area_entered"]
+[connection signal="area_exited" from="Area2D" to="Player" method="_on_area_2d_mt_area_exited"]

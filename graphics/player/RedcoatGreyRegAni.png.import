@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfg0jawfbyf65"
-path="res://.godot/imported/BattleofInkermanMap.png-2df886a0ceffce8eb34df5377eb99b5f.ctex"
+uid="uid://b6k3akv3lhhla"
+path="res://.godot/imported/RedcoatGreyRegAni.png-8590e8071e0bbbdfdbd5f7987cb04b4d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/environment/BattleofInkermanMap.png"
-dest_files=["res://.godot/imported/BattleofInkermanMap.png-2df886a0ceffce8eb34df5377eb99b5f.ctex"]
+source_file="res://graphics/player/RedcoatGreyRegAni.png"
+dest_files=["res://.godot/imported/RedcoatGreyRegAni.png-8590e8071e0bbbdfdbd5f7987cb04b4d.ctex"]
 
 [params]
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://co88tfdxmlknv"]
 
-[ext_resource type="Script" path="res://BattleOfTheAlma.gd" id="1_1o6i7"]
+[ext_resource type="Script" path="res://BattlesScene.gd" id="1_fhjgx"]
 [ext_resource type="Texture2D" uid="uid://bg5j44m5cwdux" path="res://graphics/environment/BattleoftheAlmaMap.png" id="2_xwq6i"]
 [ext_resource type="PackedScene" uid="uid://cpm1ldb8ohnws" path="res://scenes/player/BritishReg.tscn" id="4_5lqtq"]
 [ext_resource type="PackedScene" uid="uid://cqvd3a3cj3ktu" path="res://scenes/player/RussianReg.tscn" id="5_13ojy"]
@@ -8,7 +8,7 @@
 [ext_resource type="Script" path="res://scenes/player/HealthBar.gd" id="6_m3lrq"]
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource("1_1o6i7")
+script = ExtResource("1_fhjgx")
 
 [node name="BattleoftheAlmaMap" type="Sprite2D" parent="."]
 position = Vector2(1920, 1080)

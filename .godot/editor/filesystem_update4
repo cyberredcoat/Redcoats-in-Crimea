@@ -11,3 +11,10 @@ res://scenes/projectiles/bullet.gd
 res://RussianHealthBar.gd
 res://HealthBar.gd
 res://BattleOfInkerman.tscn
+res://scenes/player/RussianHealthBar.gd
+res://scenes/player/HealthBar.gd
+res://BattlesScene.gd
+res://scenes/player/BritishGreyReg.tscn
+res://scenes/player/BritishGreyReg.gd
+res://scenes/player/RussianInkermanReg.tscn
+res://scenes/player/RussianInkermanReg.gd

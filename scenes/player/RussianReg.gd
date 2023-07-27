@@ -21,7 +21,7 @@ func _on_fireable_timer_timeout():
 	var rng = RandomNumberGenerator.new()
 	var fireableNumber = rng.randf_range(0, 1)
 
-	if fireableNumber >= 0.25:
+	if fireableNumber >= 0.2:
 		print("Fire!")
 		$RussianRegAni/AnimationPlayer.play("Fire")
 		russianCanFire = false

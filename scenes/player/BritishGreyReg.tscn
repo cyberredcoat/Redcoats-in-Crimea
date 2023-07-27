@@ -1,0 +1,103 @@
+[gd_scene load_steps=8 format=3 uid="uid://c73awthrska8c"]
+
+[ext_resource type="Script" path="res://scenes/player/BritishReg.gd" id="1_s7b02"]
+[ext_resource type="Texture2D" uid="uid://b6k3akv3lhhla" path="res://graphics/player/RedcoatGreyRegAni.png" id="2_kdcgw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_so4y2"]
+size = Vector2(19.2, 112)
+
+[sub_resource type="Animation" id="Animation_t8hwo"]
+resource_name = "BayonetSide"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RedcoatRegAni:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_lyep5"]
+resource_name = "BayonetFront"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RedcoatRegAni:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_8d1vd"]
+resource_name = "Fire"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RedcoatRegAni:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_o7u1i"]
+_data = {
+"BayonetFront": SubResource("Animation_lyep5"),
+"BayonetSide": SubResource("Animation_t8hwo"),
+"Fire": SubResource("Animation_8d1vd")
+}
+
+[node name="Player" type="CharacterBody2D"]
+rotation = -1.57079
+script = ExtResource("1_s7b02")
+
+[node name="ShootStart" type="Marker2D" parent="."]
+position = Vector2(128, -0.000801086)
+rotation = -0.000936431
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="PlayerCollisionShape" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-8, 5.81264e-05)
+scale = Vector2(5, 5)
+shape = SubResource("RectangleShape2D_so4y2")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[node name="Timers" type="Node2D" parent="."]
+
+[node name="FireTimer" type="Timer" parent="Timers"]
+wait_time = 0.7
+
+[node name="HealthTimer" type="Timer" parent="Timers"]
+autostart = true
+
+[node name="FireableTimer" type="Timer" parent="Timers"]
+wait_time = 1.5
+
+[node name="RedcoatRegAni" type="Sprite2D" parent="."]
+position = Vector2(24, 0.999847)
+rotation = 1.57087
+texture = ExtResource("2_kdcgw")
+hframes = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="RedcoatRegAni"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_o7u1i")
+}
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="timeout" from="Timers/FireTimer" to="." method="_on_fire_timer_timeout"]
+[connection signal="timeout" from="Timers/HealthTimer" to="." method="_on_health_timer_timeout"]
+[connection signal="timeout" from="Timers/FireableTimer" to="." method="_on_fireable_timer_timeout"]

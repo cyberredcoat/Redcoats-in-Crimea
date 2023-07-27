@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfg0jawfbyf65"
-path="res://.godot/imported/BattleofInkermanMap.png-2df886a0ceffce8eb34df5377eb99b5f.ctex"
+uid="uid://bifnj2hr3qrhp"
+path="res://.godot/imported/BattleofInkermanFogMap.png-1df594ad359a552a70a0cc29e7ef5938.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/environment/BattleofInkermanMap.png"
-dest_files=["res://.godot/imported/BattleofInkermanMap.png-2df886a0ceffce8eb34df5377eb99b5f.ctex"]
+source_file="res://graphics/environment/BattleofInkermanFogMap.png"
+dest_files=["res://.godot/imported/BattleofInkermanFogMap.png-1df594ad359a552a70a0cc29e7ef5938.ctex"]
 
 [params]
 
