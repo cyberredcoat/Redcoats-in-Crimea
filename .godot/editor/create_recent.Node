@@ -1,9 +1,9 @@
-Timer
-VideoStreamPlayer
 AudioStreamPlayer
-AudioStreamPlayer2D
 CollisionShape2D
 Area2D
+Timer
+VideoStreamPlayer
+AudioStreamPlayer2D
 PathFollow2D
 Path2D
 Camera2D

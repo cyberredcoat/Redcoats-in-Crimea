@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://dq0t4mgyqg1im"]
+
+[ext_resource type="Texture2D" uid="uid://6o2d8bqjyowc" path="res://graphics/environment/Redcoats in Crimea.png" id="1_6sr8r"]
+[ext_resource type="Script" path="res://Menu.gd" id="1_7ivd2"]
+[ext_resource type="AudioStream" uid="uid://tnu3k8fg2gfg" path="res://music/Hej_Sokoły.mp3" id="3_w33u3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_76lpy"]
+size = Vector2(745, 292.5)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_7ivd2")
+
+[node name="RedcoatsInCrimea" type="Sprite2D" parent="."]
+position = Vector2(1920, 1080)
+texture = ExtResource("1_6sr8r")
+
+[node name="Area2D" type="Area2D" parent="RedcoatsInCrimea"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RedcoatsInCrimea/Area2D"]
+position = Vector2(-12.5, -82.25)
+shape = SubResource("RectangleShape2D_76lpy")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_w33u3")
+autoplay = true
+
+[connection signal="input_event" from="RedcoatsInCrimea/Area2D" to="." method="_on_area_2d_input_event"]

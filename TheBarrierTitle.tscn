@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bw5ycxan6k70"]
+
+[ext_resource type="Texture2D" uid="uid://cyuq882v7htth" path="res://graphics/environment/TheBarrierTitle.png" id="1_1wjt0"]
+[ext_resource type="Script" path="res://TheBarrierTitle.gd" id="1_lkugl"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_lkugl")
+
+[node name="TheBarrierTitle" type="Sprite2D" parent="."]
+position = Vector2(1920, 1080)
+texture = ExtResource("1_1wjt0")

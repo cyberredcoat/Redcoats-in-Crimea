@@ -26,3 +26,13 @@ res://NPCBritish2.gd
 res://NPCBritish3.gd
 res://NPCBritish4.gd
 res://TimerAlma.gd
+res://InkermanTitle.tscn
+res://InkermanTitle.gd
+res://BattleOfTheAlmaTitle.tscn
+res://TheBarrierTitle.tscn
+res://TheBarrierTitle.gd
+res://scenes/player/RussianBarrierReg.tscn
+res://scenes/player/RussianBarrierReg.gd
+res://AlmaTitle.gd
+res://Menu.tscn
+res://Menu.gd

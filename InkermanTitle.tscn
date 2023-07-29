@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://1yqk8xbgcut8"]
+
+[ext_resource type="Texture2D" uid="uid://c0dlvddwcq61u" path="res://graphics/environment/BattleofInkermanTitle.png" id="1_3i5x8"]
+[ext_resource type="Script" path="res://InkermanTitle.gd" id="1_84s5d"]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(944, -304)
+script = ExtResource("1_84s5d")
+
+[node name="BattleofInkermanTitle" type="Sprite2D" parent="."]
+position = Vector2(976, 1384)
+texture = ExtResource("1_3i5x8")
