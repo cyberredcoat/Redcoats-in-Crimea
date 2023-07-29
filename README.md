@@ -2,7 +2,7 @@
 
 Built on **MacOS Sonoma Beta**
 
-## How To Add The Videos:
+## How To Add The Videos
 1. **Download** the videos from [HERE](https://drive.google.com/drive/folders/1A-wKKjpPAYgLB5CDzJt6u42C_ve-d_My?usp=drive_link)
 
 2. Create a file named "videos", "videos" exactly, no capitalisation
