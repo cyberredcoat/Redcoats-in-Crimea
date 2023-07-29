@@ -14,7 +14,7 @@ Enter : Continue/Skip
 
 ### Battles
 #### Battle of the Alma
-Form the lune by commanding your regiment to fight the enemy regiment who no one else is heading towards
+Form the line by commanding your regiment to fight the enemy regiment who no one else is heading towards
 
 #### Battle of Inkerman: Home Ridge
 Defend your allies by fighting the enemy regiment which just entered the battle from the north. 
