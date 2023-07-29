@@ -12,8 +12,8 @@ Built on **MacOS Sonoma Beta**
 
 4. DONE!
 
-NOTE: DO NOT RENAME ANY OF THE VIDEO FILES. They should be one for every following name:
-  BattleOfTheAlmaIntro.ogv
-  GodSave.ogv
-  InkermanInter.ogv
-  Outro.ogv
+NOTE: DO NOT RENAME ANY OF THE VIDEO FILES. They should be one for every following name:  
+  BattleOfTheAlmaIntro.ogv  
+  GodSave.ogv  
+  InkermanInter.ogv  
+  Outro.ogv  
