@@ -44,3 +44,7 @@ func _on_area_2d_area_entered(area):
 		get_tree().reload_current_scene()
 	if health <= 0:
 		get_tree().reload_current_scene()
+
+
+func _on_russian_reg_russian_shoot(posi, dir):
+	pass # Replace with function body.

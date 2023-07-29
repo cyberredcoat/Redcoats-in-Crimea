@@ -12,3 +12,9 @@ res://TheBarrierTitle.tscn
 res://scenes/player/RussianBarrierReg.tscn
 res://Menu.tscn
 res://Menu.gd
+res://scenes/player/RussianHealthBar.gd
+res://scenes/player/BritishReg.gd
+res://BattlesScene.gd
+res://scenes/player/RussianBarrierReg.gd
+res://scenes/player/RussianInkermanReg.gd
+res://InkermanRuNPC.gd

@@ -210,5 +210,5 @@ mix_target = 1
 [connection signal="player_shoot" from="Player" to="." method="_on_player_player_shoot"]
 [connection signal="russianHealthSignal" from="RussianReg" to="." method="_on_russian_reg_russian_health_signal"]
 [connection signal="russianHealthSignal" from="RussianReg" to="RussianHealthBar" method="_on_russian_reg_russian_health_signal"]
-[connection signal="russianShoot" from="RussianReg" to="." method="_on_russian_reg_2_russian_shoot"]
 [connection signal="russianShoot" from="RussianReg" to="." method="_on_russian_reg_russian_shoot"]
+[connection signal="russianShoot" from="RussianReg" to="." method="_on_russian_reg_2_russian_shoot"]

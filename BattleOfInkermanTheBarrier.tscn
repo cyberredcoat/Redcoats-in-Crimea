@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://BattlesScene.gd" id="1_qsu0j"]
 [ext_resource type="Texture2D" uid="uid://de35s51q3j32r" path="res://graphics/environment/BattleofInkermanTheBarrierMap.png" id="2_13in2"]
-[ext_resource type="PackedScene" uid="uid://cqvd3a3cj3ktu" path="res://scenes/player/RussianReg.tscn" id="4_df0cs"]
+[ext_resource type="PackedScene" uid="uid://dt1gnhuiksaul" path="res://scenes/player/RussianBarrierReg.tscn" id="4_g53gg"]
 [ext_resource type="PackedScene" uid="uid://c73awthrska8c" path="res://scenes/player/BritishGreyReg.tscn" id="4_yavjo"]
 [ext_resource type="Texture2D" uid="uid://b586qwwnwjowt" path="res://graphics/environment/BattleofInkermanTheBarrierFogMap.png" id="5_8wugu"]
 [ext_resource type="Script" path="res://scenes/player/RussianHealthBar.gd" id="5_k0dum"]
@@ -15,33 +15,19 @@ script = ExtResource("1_qsu0j")
 position = Vector2(1920, 1080)
 texture = ExtResource("2_13in2")
 
-[node name="Path2D" type="Path2D" parent="."]
-visible = false
-position = Vector2(16, 80)
-rotation = -0.053417
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-unique_name_in_owner = true
-position = Vector2(1591.27, 551.661)
-rotation = 1.48422
-loop = false
-
-[node name="Area2D" type="Area2D" parent="Path2D/PathFollow2D"]
-position = Vector2(0.456543, 0.431641)
-rotation = 1.79571
-
 [node name="ProjectilesEnemy" type="Node2D" parent="."]
 unique_name_in_owner = true
 
 [node name="Projectiles" type="Node2D" parent="."]
 unique_name_in_owner = true
 
-[node name="RussianReg" parent="." instance=ExtResource("4_df0cs")]
-position = Vector2(1768, 728)
-rotation = -3.13814
+[node name="RussianReg" parent="." instance=ExtResource("4_g53gg")]
+position = Vector2(1528, 600)
+rotation = 3.05425
 
 [node name="Player" parent="." instance=ExtResource("4_yavjo")]
 position = Vector2(1840, 1512)
+rotation = -1.02196
 
 [node name="BattleofInkermanTheBarrierFogMap" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.992157)

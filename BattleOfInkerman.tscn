@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cmc2ug8lkewei"]
+[gd_scene load_steps=13 format=3 uid="uid://cmc2ug8lkewei"]
 
 [ext_resource type="Script" path="res://BattlesScene.gd" id="1_5d081"]
 [ext_resource type="Texture2D" uid="uid://cfg0jawfbyf65" path="res://graphics/environment/BattleofInkermanMap.png" id="2_r1yuf"]
@@ -8,6 +8,9 @@
 [ext_resource type="Script" path="res://scenes/player/RussianHealthBar.gd" id="5_au43p"]
 [ext_resource type="Texture2D" uid="uid://bifnj2hr3qrhp" path="res://graphics/environment/BattleofInkermanFogMap.png" id="5_denej"]
 [ext_resource type="Script" path="res://scenes/player/HealthBar.gd" id="6_w3ark"]
+[ext_resource type="Texture2D" uid="uid://b6k3akv3lhhla" path="res://graphics/player/RedcoatGreyRegAni.png" id="8_6f6l8"]
+[ext_resource type="PackedScene" uid="uid://bj16fl3dlu87n" path="res://scenes/player/RussianRegNPC.tscn" id="9_b2hbh"]
+[ext_resource type="PackedScene" uid="uid://vqfwtl5qlptn" path="res://scenes/player/BritishRegNPC.tscn" id="10_vxd34"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ea1v4"]
 size = Vector2(1360, 1014.5)
@@ -26,8 +29,8 @@ unique_name_in_owner = true
 unique_name_in_owner = true
 
 [node name="RussianReg" parent="." instance=ExtResource("3_1cefl")]
-position = Vector2(1480, 192)
-rotation = 3.11702
+position = Vector2(1456, 128)
+rotation = -3.13697
 scale = Vector2(0.793686, 0.793686)
 
 [node name="Player" parent="." instance=ExtResource("4_mcoew")]
@@ -43,6 +46,49 @@ position = Vector2(-160, 760)
 position = Vector2(2096, 380.75)
 shape = SubResource("RectangleShape2D_ea1v4")
 one_way_collision_margin = 0.0
+
+[node name="RussianRegNPC2" parent="." instance=ExtResource("9_b2hbh")]
+position = Vector2(1944, 112)
+rotation = 3.06276
+scale = Vector2(0.576988, 0.576988)
+
+[node name="RussianRegNPC3" parent="." instance=ExtResource("9_b2hbh")]
+position = Vector2(328, 496)
+rotation = -3.47247
+scale = Vector2(0.763249, 0.763249)
+
+[node name="RussianRegNPC" parent="." instance=ExtResource("9_b2hbh")]
+position = Vector2(880, 360)
+rotation = -3.16353
+scale = Vector2(0.759598, 0.759598)
+
+[node name="BritishRegNPC2" parent="." instance=ExtResource("10_vxd34")]
+position = Vector2(864, 536)
+rotation = -1.61803
+scale = Vector2(0.719008, 0.719008)
+
+[node name="BritishRegNPC3" parent="." instance=ExtResource("10_vxd34")]
+position = Vector2(1960, 248)
+rotation = -1.66203
+scale = Vector2(0.606734, 0.606734)
+
+[node name="BritishRegNPC" parent="." instance=ExtResource("10_vxd34")]
+position = Vector2(424, 688)
+rotation = -2.03698
+scale = Vector2(0.847944, 0.847944)
+
+[node name="RedcoatGreyRegAni" type="Sprite2D" parent="."]
+position = Vector2(2000, 1848)
+rotation = 0.972096
+texture = ExtResource("8_6f6l8")
+hframes = 3
+
+[node name="RedcoatGreyRegAni2" type="Sprite2D" parent="."]
+position = Vector2(2856, 1328)
+rotation = 1.00305
+scale = Vector2(0.621652, 0.621652)
+texture = ExtResource("8_6f6l8")
+hframes = 3
 
 [node name="BattleofInkermanFogMap" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.784314)

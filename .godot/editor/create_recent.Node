@@ -1,11 +1,11 @@
+Area2D
+PathFollow2D
+Path2D
 AudioStreamPlayer
 CollisionShape2D
-Area2D
 Timer
 VideoStreamPlayer
 AudioStreamPlayer2D
-PathFollow2D
-Path2D
 Camera2D
 CollisionPolygon2D
 AnimationPlayer
