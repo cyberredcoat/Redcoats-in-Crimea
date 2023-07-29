@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhmta1m1jumrt"]
+
+[ext_resource type="Script" path="res://AlmaTitle.gd" id="1_uu2q1"]
+[ext_resource type="Texture2D" uid="uid://cbkmf1ckppbtr" path="res://graphics/environment/BattleoftheAlmaTitle.png" id="2_cbgja"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_uu2q1")
+
+[node name="BattleoftheAlmaTitle" type="Sprite2D" parent="."]
+position = Vector2(1920, 1080)
+texture = ExtResource("2_cbgja")

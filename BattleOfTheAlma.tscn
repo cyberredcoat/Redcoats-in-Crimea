@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://co88tfdxmlknv"]
+[gd_scene load_steps=12 format=3 uid="uid://co88tfdxmlknv"]
 
 [ext_resource type="Script" path="res://BattlesScene.gd" id="1_fhjgx"]
 [ext_resource type="Texture2D" uid="uid://bg5j44m5cwdux" path="res://graphics/environment/BattleoftheAlmaMap.png" id="2_xwq6i"]
@@ -6,6 +6,17 @@
 [ext_resource type="PackedScene" uid="uid://cqvd3a3cj3ktu" path="res://scenes/player/RussianReg.tscn" id="5_13ojy"]
 [ext_resource type="Script" path="res://scenes/player/RussianHealthBar.gd" id="5_l4kv8"]
 [ext_resource type="Script" path="res://scenes/player/HealthBar.gd" id="6_m3lrq"]
+[ext_resource type="AudioStream" uid="uid://c2c1vwkyepjhr" path="res://music/TheBritishGrenadiers.mp3" id="7_28m85"]
+[ext_resource type="PackedScene" uid="uid://bj16fl3dlu87n" path="res://scenes/player/RussianRegNPC.tscn" id="8_eatew"]
+[ext_resource type="Script" path="res://NPCBritish1.gd" id="9_lk4mr"]
+[ext_resource type="PackedScene" uid="uid://vqfwtl5qlptn" path="res://scenes/player/BritishRegNPC.tscn" id="9_rktgi"]
+
+[sub_resource type="Curve2D" id="Curve2D_oygvx"]
+bake_interval = 0.01
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 624, 1880, 0, 0, 0, 0, 594.586, 1345.67, 0, 0, 0, 0, 568, 1056)
+}
+point_count = 3
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_fhjgx")
@@ -41,7 +52,34 @@ position = Vector2(1872, 1688)
 
 [node name="RussianReg" parent="." instance=ExtResource("5_13ojy")]
 position = Vector2(1768, 728)
-rotation = -3.13814
+rotation = -3.18487
+
+[node name="RussianRegNPC" parent="." instance=ExtResource("8_eatew")]
+position = Vector2(584, 720)
+rotation = 3.11262
+scale = Vector2(1, 1)
+
+[node name="Path2D2" type="Path2D" parent="."]
+rotation = -0.0159707
+scale = Vector2(1, 1)
+curve = SubResource("Curve2D_oygvx")
+
+[node name="PathFollow2DB1" type="PathFollow2D" parent="Path2D2"]
+unique_name_in_owner = true
+position = Vector2(568, 1056)
+rotation = -1.66232
+progress = 826.026
+loop = false
+
+[node name="NPCBritish1" type="Area2D" parent="Path2D2/PathFollow2DB1"]
+position = Vector2(1255.78, -495.091)
+rotation = 1.64021
+script = ExtResource("9_lk4mr")
+
+[node name="BritishRegNPC" parent="Path2D2/PathFollow2DB1/NPCBritish1" instance=ExtResource("9_rktgi")]
+position = Vector2(580.994, 1218.42)
+rotation = -1.65246
+scale = Vector2(1, 1)
 
 [node name="RussianHealthBar" type="ProgressBar" parent="."]
 unique_name_in_owner = true
@@ -71,9 +109,15 @@ value = 100.0
 show_percentage = false
 script = ExtResource("6_m3lrq")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_28m85")
+volume_db = -15.0
+autoplay = true
+mix_target = 1
+
 [connection signal="healthSignal" from="Player" to="HealthBar" method="_on_player_health_signal"]
 [connection signal="playerPos" from="Player" to="RussianReg" method="_on_player_player_pos"]
 [connection signal="player_shoot" from="Player" to="." method="_on_player_player_shoot"]
 [connection signal="russianHealthSignal" from="RussianReg" to="RussianHealthBar" method="_on_russian_reg_russian_health_signal"]
-[connection signal="russianShoot" from="RussianReg" to="." method="_on_russian_reg_2_russian_shoot"]
 [connection signal="russianShoot" from="RussianReg" to="." method="_on_russian_reg_russian_shoot"]
+[connection signal="russianShoot" from="RussianReg" to="." method="_on_russian_reg_2_russian_shoot"]

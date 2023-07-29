@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://cqvd3a3cj3ktu"]
+[gd_scene load_steps=10 format=3 uid="uid://cqvd3a3cj3ktu"]
 
 [ext_resource type="Script" path="res://scenes/player/RussianReg.gd" id="1_0ryfc"]
 [ext_resource type="Texture2D" uid="uid://bhuv5rfa1aamb" path="res://graphics/player/RussianRegAni.png" id="1_uv3i3"]
+[ext_resource type="AudioStream" uid="uid://bi7hdf8bm8bjo" path="res://music/MusketFire.mp3" id="3_fro6m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xbsil"]
 size = Vector2(95.9999, 559.989)
@@ -99,6 +100,11 @@ unique_name_in_owner = true
 libraries = {
 "": SubResource("AnimationLibrary_hs2gb")
 }
+
+[node name="EnemyFire" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("3_fro6m")
+volume_db = -30.0
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="timeout" from="Timers/FireTimer" to="." method="_on_fire_timer_timeout"]

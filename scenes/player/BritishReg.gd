@@ -3,9 +3,11 @@ extends CharacterBody2D
 signal player_shoot(pos,dir)
 signal playerPos(pos,dir)
 signal healthSignal(health)
+signal playerSound(sound)
 @export var speed: int = 20
 var can_shoot: bool = true
 var onHill: bool = true
+var sound: bool = false
 var health = 100
 
 func _ready():
@@ -22,12 +24,12 @@ func _process(_delta):
 	look_at(get_global_mouse_position())
 
 	if Input.is_action_pressed("fire") and can_shoot:
-		print("Fire!")
 		$RedcoatRegAni/AnimationPlayer.play("Fire")
 		can_shoot = false
 		$Timers/FireTimer.start()
 		player_shoot.emit(pos,dir)
 		$Timers/FireableTimer.start()
+		$PlayerFire.play()
 
 func _on_fire_timer_timeout():
 	$RedcoatRegAni/AnimationPlayer.play("BayonetFront")

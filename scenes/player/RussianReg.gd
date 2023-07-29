@@ -22,13 +22,11 @@ func _on_fireable_timer_timeout():
 	var fireableNumber = rng.randf_range(0, 1)
 
 	if fireableNumber >= 0.2:
-		print("Fire!")
 		$RussianRegAni/AnimationPlayer.play("Fire")
 		russianCanFire = false
 		$Timers/FireTimer.start()
 		russianShoot.emit(posi, dir)
-	else:
-		print("NO")
+		$EnemyFire.play()
 
 func _on_fire_timer_timeout():
 	$RussianRegAni/AnimationPlayer.play("BayonetFront")

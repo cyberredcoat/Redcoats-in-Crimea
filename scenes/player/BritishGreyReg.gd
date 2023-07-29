@@ -22,7 +22,6 @@ func _process(_delta):
 	look_at(get_global_mouse_position())
 
 	if Input.is_action_pressed("fire") and can_shoot:
-		print("Fire!")
 		$RedcoatRegAni/AnimationPlayer.play("Fire")
 		can_shoot = false
 		$Timers/FireTimer.start()

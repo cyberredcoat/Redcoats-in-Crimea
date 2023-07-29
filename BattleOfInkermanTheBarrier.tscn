@@ -1,0 +1,83 @@
+[gd_scene load_steps=8 format=3 uid="uid://pdvtccif5ee6"]
+
+[ext_resource type="Script" path="res://BattlesScene.gd" id="1_qsu0j"]
+[ext_resource type="Texture2D" uid="uid://de35s51q3j32r" path="res://graphics/environment/BattleofInkermanTheBarrierMap.png" id="2_13in2"]
+[ext_resource type="PackedScene" uid="uid://cqvd3a3cj3ktu" path="res://scenes/player/RussianReg.tscn" id="4_df0cs"]
+[ext_resource type="PackedScene" uid="uid://c73awthrska8c" path="res://scenes/player/BritishGreyReg.tscn" id="4_yavjo"]
+[ext_resource type="Texture2D" uid="uid://b586qwwnwjowt" path="res://graphics/environment/BattleofInkermanTheBarrierFogMap.png" id="5_8wugu"]
+[ext_resource type="Script" path="res://scenes/player/RussianHealthBar.gd" id="5_k0dum"]
+[ext_resource type="Script" path="res://scenes/player/HealthBar.gd" id="6_750yj"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_qsu0j")
+
+[node name="BattleofInkermanTheBarrierMap" type="Sprite2D" parent="."]
+position = Vector2(1920, 1080)
+texture = ExtResource("2_13in2")
+
+[node name="Path2D" type="Path2D" parent="."]
+visible = false
+position = Vector2(16, 80)
+rotation = -0.053417
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+unique_name_in_owner = true
+position = Vector2(1591.27, 551.661)
+rotation = 1.48422
+loop = false
+
+[node name="Area2D" type="Area2D" parent="Path2D/PathFollow2D"]
+position = Vector2(0.456543, 0.431641)
+rotation = 1.79571
+
+[node name="ProjectilesEnemy" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="Projectiles" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="RussianReg" parent="." instance=ExtResource("4_df0cs")]
+position = Vector2(1768, 728)
+rotation = -3.13814
+
+[node name="Player" parent="." instance=ExtResource("4_yavjo")]
+position = Vector2(1840, 1512)
+
+[node name="BattleofInkermanTheBarrierFogMap" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.988235)
+position = Vector2(1920, 1080)
+texture = ExtResource("5_8wugu")
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+modulate = Color(0, 1, 0, 1)
+self_modulate = Color(0, 1, 0, 1)
+light_mask = 1023
+visibility_layer = 1023
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 384.0
+offset_bottom = 128.0
+value = 100.0
+show_percentage = false
+script = ExtResource("6_750yj")
+
+[node name="RussianHealthBar" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+modulate = Color(1, 0, 0, 1)
+self_modulate = Color(1, 0, 0, 1)
+light_mask = 1023
+visibility_layer = 1023
+offset_left = 64.0001
+offset_top = 152.0
+offset_right = 384.0
+offset_bottom = 216.0
+value = 100.0
+show_percentage = false
+script = ExtResource("5_k0dum")
+
+[connection signal="russianHealthSignal" from="RussianReg" to="RussianHealthBar" method="_on_russian_reg_russian_health_signal"]
+[connection signal="russianShoot" from="RussianReg" to="." method="_on_russian_reg_russian_shoot"]
+[connection signal="healthSignal" from="Player" to="HealthBar" method="_on_player_health_signal"]
+[connection signal="playerPos" from="Player" to="RussianReg" method="_on_player_player_pos"]
+[connection signal="player_shoot" from="Player" to="." method="_on_player_player_shoot"]
