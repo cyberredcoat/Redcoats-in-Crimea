@@ -1,22 +1,43 @@
-[gd_scene load_steps=12 format=3 uid="uid://co88tfdxmlknv"]
+[gd_scene load_steps=18 format=3 uid="uid://co88tfdxmlknv"]
 
 [ext_resource type="Script" path="res://BattlesScene.gd" id="1_fhjgx"]
 [ext_resource type="Texture2D" uid="uid://bg5j44m5cwdux" path="res://graphics/environment/BattleoftheAlmaMap.png" id="2_xwq6i"]
 [ext_resource type="PackedScene" uid="uid://cpm1ldb8ohnws" path="res://scenes/player/BritishReg.tscn" id="4_5lqtq"]
 [ext_resource type="PackedScene" uid="uid://cqvd3a3cj3ktu" path="res://scenes/player/RussianReg.tscn" id="5_13ojy"]
 [ext_resource type="Script" path="res://scenes/player/RussianHealthBar.gd" id="5_l4kv8"]
+[ext_resource type="Script" path="res://AlmaNPC/NPCBritish2.gd" id="6_1x5od"]
 [ext_resource type="Script" path="res://scenes/player/HealthBar.gd" id="6_m3lrq"]
 [ext_resource type="AudioStream" uid="uid://c2c1vwkyepjhr" path="res://music/TheBritishGrenadiers.mp3" id="7_28m85"]
 [ext_resource type="PackedScene" uid="uid://bj16fl3dlu87n" path="res://scenes/player/RussianRegNPC.tscn" id="8_eatew"]
-[ext_resource type="Script" path="res://NPCBritish1.gd" id="9_lk4mr"]
+[ext_resource type="Script" path="res://AlmaNPC/NPCBritish1.gd" id="8_np2la"]
+[ext_resource type="Script" path="res://AlmaNPC/NPCBritish4.gd" id="9_onjrb"]
 [ext_resource type="PackedScene" uid="uid://vqfwtl5qlptn" path="res://scenes/player/BritishRegNPC.tscn" id="9_rktgi"]
+[ext_resource type="Script" path="res://AlmaNPC/NPCBritish3.gd" id="10_c58ky"]
 
 [sub_resource type="Curve2D" id="Curve2D_oygvx"]
 bake_interval = 0.01
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 624, 1880, 0, 0, 0, 0, 594.586, 1345.67, 0, 0, 0, 0, 568, 1056)
+"points": PackedVector2Array(0, 0, 0, 0, 624, 1880, 0, 0, 0, 0, 568, 1056)
 }
-point_count = 3
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_rinrn"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 483.938, 1888.42, 0, 0, 0, 0, 397.289, 1093.25)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_eoj6t"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 548.257, 1885.23, -19.0239, 106.591, 19.0239, -106.591, 665.9, 1722.89, -83.8185, 33.8154, 83.8185, -33.8154, 872.865, 1555.9, -64.5126, 19.3346, 64.5126, -19.3346, 1108.29, 1481.29, -76.4574, 25.5537, 76.4574, -25.5537, 1275.14, 1438.2, 0, 0, 0, 0, 1595.81, 1390.67)
+}
+point_count = 6
+
+[sub_resource type="Curve2D" id="Curve2D_p6b5u"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 529.214, 1877.62, 0, 0, 0, 0, 416.526, 1132.9)
+}
+point_count = 2
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_fhjgx")
@@ -48,33 +69,106 @@ unique_name_in_owner = true
 
 [node name="Player" parent="." instance=ExtResource("4_5lqtq")]
 unique_name_in_owner = true
-position = Vector2(1872, 1688)
+position = Vector2(1752, 1728)
+rotation = -1.64401
 
 [node name="RussianReg" parent="." instance=ExtResource("5_13ojy")]
-position = Vector2(1768, 728)
+position = Vector2(1624, 688)
 rotation = -3.18487
 
+[node name="RussianRegNPC2" parent="." instance=ExtResource("8_eatew")]
+position = Vector2(1000, 704)
+rotation = -3.15838
+
+[node name="RussianRegNPC4" parent="." instance=ExtResource("8_eatew")]
+position = Vector2(2240, 624)
+rotation = -3.20332
+
 [node name="RussianRegNPC" parent="." instance=ExtResource("8_eatew")]
-position = Vector2(584, 720)
+position = Vector2(360, 720)
 rotation = 3.11262
 
 [node name="Path2D2" type="Path2D" parent="."]
+position = Vector2(-64, -8.00001)
 rotation = -0.0159707
 curve = SubResource("Curve2D_oygvx")
 
-[node name="PathFollow2DB1" type="PathFollow2D" parent="Path2D2"]
+[node name="PathFollow2D2" type="PathFollow2D" parent="Path2D2"]
 unique_name_in_owner = true
 position = Vector2(624, 1880)
-rotation = -1.62579
+rotation = -1.63865
 loop = false
 
-[node name="NPCBritish1" type="Area2D" parent="Path2D2/PathFollow2DB1"]
+[node name="NPCBritish1" type="Area2D" parent="Path2D2/PathFollow2D2"]
 position = Vector2(1255.78, -495.091)
 rotation = 1.64021
-script = ExtResource("9_lk4mr")
+script = ExtResource("6_1x5od")
 
-[node name="BritishRegNPC" parent="Path2D2/PathFollow2DB1/NPCBritish1" instance=ExtResource("9_rktgi")]
-position = Vector2(580.994, 1218.42)
+[node name="BritishRegNPC" parent="Path2D2/PathFollow2D2/NPCBritish1" instance=ExtResource("9_rktgi")]
+position = Vector2(410.832, 1211.07)
+rotation = -1.65384
+
+[node name="Path2D3" type="Path2D" parent="."]
+position = Vector2(584, -96)
+rotation = -0.0319414
+curve = SubResource("Curve2D_rinrn")
+
+[node name="PathFollow2D1" type="PathFollow2D" parent="Path2D3"]
+unique_name_in_owner = true
+position = Vector2(483.938, 1888.42)
+rotation = -1.67934
+loop = false
+
+[node name="NPCBritish1" type="Area2D" parent="Path2D3/PathFollow2D1"]
+position = Vector2(1255.78, -495.091)
+rotation = 1.64021
+script = ExtResource("8_np2la")
+
+[node name="BritishRegNPC" parent="Path2D3/PathFollow2D1/NPCBritish1" instance=ExtResource("9_rktgi")]
+position = Vector2(541.098, 1215.58)
+rotation = -1.54616
+
+[node name="Path2D5" type="Path2D" parent="."]
+position = Vector2(2120, 336)
+rotation = -0.127766
+scale = Vector2(1, 0.999999)
+curve = SubResource("Curve2D_eoj6t")
+
+[node name="PathFollow2D4" type="PathFollow2D" parent="Path2D5"]
+unique_name_in_owner = true
+position = Vector2(548.257, 1885.23)
+rotation = -0.943704
+loop = false
+
+[node name="NPCBritish1" type="Area2D" parent="Path2D5/PathFollow2D4"]
+position = Vector2(1255.78, -495.091)
+rotation = 1.64021
+script = ExtResource("9_onjrb")
+
+[node name="BritishRegNPC" parent="Path2D5/PathFollow2D4/NPCBritish1" instance=ExtResource("9_rktgi")]
+position = Vector2(611.51, 1230.95)
+rotation = -1.35895
+scale = Vector2(0.542983, 0.542983)
+script = null
+
+[node name="Path2D4" type="Path2D" parent="."]
+position = Vector2(1752, -256)
+rotation = -0.0638828
+curve = SubResource("Curve2D_p6b5u")
+
+[node name="PathFollow2D3" type="PathFollow2D" parent="Path2D4"]
+unique_name_in_owner = true
+position = Vector2(529.214, 1877.62)
+rotation = -1.72097
+loop = false
+
+[node name="NPCBritish1" type="Area2D" parent="Path2D4/PathFollow2D3"]
+position = Vector2(1255.78, -495.091)
+rotation = 1.64021
+script = ExtResource("10_c58ky")
+
+[node name="BritishRegNPC" parent="Path2D4/PathFollow2D3/NPCBritish1" instance=ExtResource("9_rktgi")]
+position = Vector2(611.51, 1230.95)
 rotation = -1.54616
 
 [node name="RussianHealthBar" type="ProgressBar" parent="."]
@@ -114,6 +208,7 @@ mix_target = 1
 [connection signal="healthSignal" from="Player" to="HealthBar" method="_on_player_health_signal"]
 [connection signal="playerPos" from="Player" to="RussianReg" method="_on_player_player_pos"]
 [connection signal="player_shoot" from="Player" to="." method="_on_player_player_shoot"]
+[connection signal="russianHealthSignal" from="RussianReg" to="." method="_on_russian_reg_russian_health_signal"]
 [connection signal="russianHealthSignal" from="RussianReg" to="RussianHealthBar" method="_on_russian_reg_russian_health_signal"]
 [connection signal="russianShoot" from="RussianReg" to="." method="_on_russian_reg_russian_shoot"]
 [connection signal="russianShoot" from="RussianReg" to="." method="_on_russian_reg_2_russian_shoot"]

@@ -87,7 +87,7 @@ libraries = {
 [node name="NPCFire" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("3_s4dlp")
-volume_db = -50.0
+volume_db = -35.0
 
 [connection signal="timeout" from="Timers/FireTimer" to="." method="_on_fire_timer_timeout"]
 [connection signal="timeout" from="Timers/FireableTimer" to="." method="_on_fireable_timer_timeout"]

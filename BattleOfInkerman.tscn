@@ -34,6 +34,7 @@ scale = Vector2(0.793686, 0.793686)
 position = Vector2(1776, 1264)
 scale = Vector2(0.795783, 0.795783)
 script = ExtResource("5_4whuq")
+speed = 20
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(-160, 760)

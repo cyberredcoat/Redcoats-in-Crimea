@@ -4,7 +4,7 @@ signal player_shoot(pos,dir)
 signal playerPos(pos,dir)
 signal healthSignal(health)
 signal playerSound(sound)
-@export var speed: int = 20
+@export var speed: int = 8
 var can_shoot: bool = true
 var onHill: bool = true
 var sound: bool = false

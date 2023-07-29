@@ -21,3 +21,8 @@ res://Outro.gd
 res://scenes/player/BritishRegNPC.gd
 res://GodSave.gd
 res://GodSave.tscn
+res://NPCBritish1.gd
+res://NPCBritish2.gd
+res://NPCBritish3.gd
+res://NPCBritish4.gd
+res://TimerAlma.gd

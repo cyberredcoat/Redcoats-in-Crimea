@@ -1,3 +1,4 @@
+Timer
 VideoStreamPlayer
 AudioStreamPlayer
 AudioStreamPlayer2D
@@ -8,7 +9,6 @@ Path2D
 Camera2D
 CollisionPolygon2D
 AnimationPlayer
-Timer
 ProgressBar
 CharacterBody2D
 Node2D

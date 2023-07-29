@@ -35,6 +35,6 @@ func _on_area_2d_area_entered(area):
 	russianHealthSignal.emit(russianHealth)
 	
 	if russianHealth == 0:
-		queue_free()
+		russianCanFire = false
 	if russianHealth <= 0:
-		queue_free()
+		russianCanFire = false

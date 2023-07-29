@@ -44,7 +44,7 @@ rotation = -3.13814
 position = Vector2(1840, 1512)
 
 [node name="BattleofInkermanTheBarrierFogMap" type="Sprite2D" parent="."]
-modulate = Color(1, 1, 1, 0.988235)
+modulate = Color(1, 1, 1, 0.992157)
 position = Vector2(1920, 1080)
 texture = ExtResource("5_8wugu")
 

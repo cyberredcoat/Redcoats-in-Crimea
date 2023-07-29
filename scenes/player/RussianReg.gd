@@ -20,21 +20,26 @@ func _on_fireable_timer_timeout():
 	var rng = RandomNumberGenerator.new()
 	var fireableNumber = rng.randf_range(0, 1)
 
-	if fireableNumber >= 0.2:
-		$RussianRegAni/AnimationPlayer.play("Fire")
-		russianCanFire = false
-		$Timers/FireTimer.start()
-		russianShoot.emit(posi, dir)
-		$EnemyFire.play()
+	if russianCanFire:
+		if fireableNumber >= 0.2:
+			$RussianRegAni/AnimationPlayer.play("Fire")
+			russianCanFire = false
+			$Timers/FireTimer.start()
+			russianShoot.emit(posi, dir)
+			$EnemyFire.play()
 
 func _on_fire_timer_timeout():
 	$RussianRegAni/AnimationPlayer.play("BayonetFront")
+	russianCanFire = true
 
 func _on_area_2d_area_entered(area):
 	russianHealth -= 2
 	russianHealthSignal.emit(russianHealth)
 	
 	if russianHealth == 0:
-		queue_free()
+		russianCanFire = false
+		get_tree().change_scene_to_file("res://Inter.tscn")
+		
 	if russianHealth <= 0:
-		queue_free()
+		russianCanFire = false
+		get_tree().change_scene_to_file("res://Inter.tscn")
