@@ -57,18 +57,15 @@ rotation = -3.18487
 [node name="RussianRegNPC" parent="." instance=ExtResource("8_eatew")]
 position = Vector2(584, 720)
 rotation = 3.11262
-scale = Vector2(1, 1)
 
 [node name="Path2D2" type="Path2D" parent="."]
 rotation = -0.0159707
-scale = Vector2(1, 1)
 curve = SubResource("Curve2D_oygvx")
 
 [node name="PathFollow2DB1" type="PathFollow2D" parent="Path2D2"]
 unique_name_in_owner = true
-position = Vector2(568, 1056)
-rotation = -1.66232
-progress = 826.026
+position = Vector2(624, 1880)
+rotation = -1.62579
 loop = false
 
 [node name="NPCBritish1" type="Area2D" parent="Path2D2/PathFollow2DB1"]
@@ -78,8 +75,7 @@ script = ExtResource("9_lk4mr")
 
 [node name="BritishRegNPC" parent="Path2D2/PathFollow2DB1/NPCBritish1" instance=ExtResource("9_rktgi")]
 position = Vector2(580.994, 1218.42)
-rotation = -1.65246
-scale = Vector2(1, 1)
+rotation = -1.54616
 
 [node name="RussianHealthBar" type="ProgressBar" parent="."]
 unique_name_in_owner = true

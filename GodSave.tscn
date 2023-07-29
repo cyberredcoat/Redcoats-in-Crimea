@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://qls5g5ddwerq"]
+[gd_scene load_steps=3 format=3 uid="uid://c17ysnkc84k30"]
 
-[ext_resource type="Script" path="res://Intro.gd" id="1_b1g2w"]
-[ext_resource type="VideoStream" path="res://videos/BattleOfTheAlmaIntro.ogv" id="2_4grlc"]
+[ext_resource type="Script" path="res://GodSave.gd" id="1_3svv5"]
+[ext_resource type="VideoStream" path="res://videos/GodSave.ogv" id="2_24cnv"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -10,15 +10,13 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_b1g2w")
+script = ExtResource("1_3svv5")
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
 layout_mode = 0
-offset_left = -28.0
-offset_top = -16.0
-offset_right = 3869.0
-offset_bottom = 2176.0
-stream = ExtResource("2_4grlc")
+offset_right = 3840.0
+offset_bottom = 2160.0
+stream = ExtResource("2_24cnv")
 autoplay = true
 expand = true
 

@@ -9,7 +9,6 @@ var russianHealth = 100
 
 func _ready():
 	$RussianRegAni/AnimationPlayer.play("BayonetSide")
-	$Timers/HealthTimer.start()
 
 func _on_player_player_pos(pos,dir):
 	playerPos = pos
@@ -21,20 +20,18 @@ func _on_fireable_timer_timeout():
 	var rng = RandomNumberGenerator.new()
 	var fireableNumber = rng.randf_range(0, 1)
 
-	if fireableNumber >= 0.35:
-		print("Fire!")
+	if fireableNumber >= 0.3:
 		$RussianRegAni/AnimationPlayer.play("Fire")
 		russianCanFire = false
 		$Timers/FireTimer.start()
 		russianShoot.emit(posi, dir)
-	else:
-		print("NO")
+		$EnemyFire.play()
 
 func _on_fire_timer_timeout():
 	$RussianRegAni/AnimationPlayer.play("BayonetFront")
 
 func _on_area_2d_area_entered(area):
-	russianHealth -= 1
+	russianHealth -= 2
 	russianHealthSignal.emit(russianHealth)
 	
 	if russianHealth == 0:

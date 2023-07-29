@@ -9,7 +9,6 @@ var russianHealth = 100
 
 func _ready():
 	$RussianRegAni/AnimationPlayer.play("BayonetSide")
-	$Timers/HealthTimer.start()
 
 func _on_player_player_pos(pos,dir):
 	playerPos = pos
@@ -32,20 +31,10 @@ func _on_fire_timer_timeout():
 	$RussianRegAni/AnimationPlayer.play("BayonetFront")
 
 func _on_area_2d_area_entered(area):
-	russianHealth -= 1
+	russianHealth -= 2
 	russianHealthSignal.emit(russianHealth)
 	
 	if russianHealth == 0:
 		queue_free()
 	if russianHealth <= 0:
 		queue_free()
-
-func _on_health_timer_timeout():
-	russianHealth -= 0.2
-	russianHealthSignal.emit(russianHealth)
-	
-	if russianHealth == 0:
-		queue_free()
-	if russianHealth <= 0:
-		queue_free()
-	$Timers/HealthTimer.start()

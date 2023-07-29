@@ -88,9 +88,6 @@ autostart = true
 wait_time = 2.0
 autostart = true
 
-[node name="HealthTimer" type="Timer" parent="Timers"]
-autostart = true
-
 [node name="RussianRegAni" type="Sprite2D" parent="."]
 texture = ExtResource("1_uv3i3")
 hframes = 3
@@ -109,4 +106,3 @@ volume_db = -30.0
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="timeout" from="Timers/FireTimer" to="." method="_on_fire_timer_timeout"]
 [connection signal="timeout" from="Timers/FireableTimer" to="." method="_on_fireable_timer_timeout"]
-[connection signal="timeout" from="Timers/HealthTimer" to="." method="_on_health_timer_timeout"]

@@ -72,14 +72,16 @@ offset_left = 64.0
 offset_top = 64.0
 offset_right = 384.0
 offset_bottom = 128.0
-max_value = 200.0
-value = 200.0
+value = 100.0
 show_percentage = false
 script = ExtResource("6_w3ark")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 
 [connection signal="russianHealthSignal" from="RussianReg" to="RussianHealthBar" method="_on_russian_reg_russian_health_signal"]
 [connection signal="russianShoot" from="RussianReg" to="." method="_on_russian_reg_russian_shoot"]
 [connection signal="healthSignal" from="Player" to="HealthBar" method="_on_player_health_signal"]
+[connection signal="playerPos" from="Player" to="RussianReg" method="_on_player_player_pos"]
 [connection signal="player_shoot" from="Player" to="." method="_on_player_player_shoot"]
 [connection signal="area_entered" from="Area2D" to="Player" method="_on_area_2d_mt_area_entered"]
 [connection signal="area_exited" from="Area2D" to="Player" method="_on_area_2d_mt_area_exited"]

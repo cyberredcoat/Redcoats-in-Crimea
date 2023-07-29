@@ -3,10 +3,12 @@ extends CharacterBody2D
 signal player_shoot(pos,dir)
 signal playerPos(pos,dir)
 signal healthSignal(health)
+signal playerSound(sound)
 @export var speed: int = 20
 var can_shoot: bool = true
 var onHill: bool = true
-var health = 200
+var sound: bool = false
+var health = 100
 
 func _ready():
 	$RedcoatRegAni/AnimationPlayer.play("BayonetSide")
@@ -27,6 +29,7 @@ func _process(_delta):
 		$Timers/FireTimer.start()
 		player_shoot.emit(pos,dir)
 		$Timers/FireableTimer.start()
+		$PlayerFire.play()
 
 func _on_fire_timer_timeout():
 	$RedcoatRegAni/AnimationPlayer.play("BayonetFront")
@@ -41,20 +44,3 @@ func _on_area_2d_area_entered(area):
 		get_tree().reload_current_scene()
 	if health <= 0:
 		get_tree().reload_current_scene()
-		
-func _on_area_2d_mt_area_entered(area):
-	onHill = true
-	
-func _on_area_2d_mt_area_exited(area):
-	onHill = false
-
-func _on_health_timer_timeout():
-	if onHill:
-		health -= 1
-		healthSignal.emit(health)
-		if health == 0:
-			queue_free()
-		if health <= 0:
-			queue_free()
-			
-	$Timers/HealthTimer.start()

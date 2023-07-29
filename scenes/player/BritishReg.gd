@@ -38,19 +38,9 @@ func _on_fireable_timer_timeout():
 	can_shoot = true
 
 func _on_area_2d_area_entered(area):
-	health -= 1
+	health -= 2
 	healthSignal.emit(health)
 	if health == 0:
 		get_tree().reload_current_scene()
 	if health <= 0:
 		get_tree().reload_current_scene()
-
-func _on_health_timer_timeout():
-	health -= 0.1
-	healthSignal.emit(health)
-	
-	if health == 0:
-		queue_free()
-	if health <= 0:
-		queue_free()
-	$Timers/HealthTimer.start()

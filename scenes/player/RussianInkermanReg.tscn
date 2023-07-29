@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://dofde0twb7iyy"]
+[gd_scene load_steps=10 format=3 uid="uid://dofde0twb7iyy"]
 
 [ext_resource type="Script" path="res://scenes/player/RussianInkermanReg.gd" id="1_xtctw"]
 [ext_resource type="Texture2D" uid="uid://bhuv5rfa1aamb" path="res://graphics/player/RussianRegAni.png" id="2_xwgje"]
+[ext_resource type="AudioStream" uid="uid://bi7hdf8bm8bjo" path="res://music/MusketFire.mp3" id="3_ps8m6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xbsil"]
 size = Vector2(95.9999, 559.989)
@@ -87,9 +88,6 @@ autostart = true
 wait_time = 2.0
 autostart = true
 
-[node name="HealthTimer" type="Timer" parent="Timers"]
-autostart = true
-
 [node name="RussianRegAni" type="Sprite2D" parent="."]
 texture = ExtResource("2_xwgje")
 hframes = 3
@@ -100,7 +98,11 @@ libraries = {
 "": SubResource("AnimationLibrary_hs2gb")
 }
 
+[node name="EnemyFire" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("3_ps8m6")
+volume_db = -30.0
+
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="timeout" from="Timers/FireTimer" to="." method="_on_fire_timer_timeout"]
 [connection signal="timeout" from="Timers/FireableTimer" to="." method="_on_fireable_timer_timeout"]
-[connection signal="timeout" from="Timers/HealthTimer" to="." method="_on_health_timer_timeout"]
