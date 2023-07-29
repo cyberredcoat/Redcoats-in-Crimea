@@ -18,3 +18,5 @@ res://BattlesScene.gd
 res://scenes/player/RussianBarrierReg.gd
 res://scenes/player/RussianInkermanReg.gd
 res://InkermanRuNPC.gd
+res://Message.tscn
+res://Message.gd
