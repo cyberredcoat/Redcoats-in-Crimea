@@ -5,7 +5,7 @@ func _ready():
 	
 func _process(delta):
 	if Input.is_action_pressed("skip"):
-		get_tree().change_scene_to_file("res://BattleOfTheAlmaTitle.tscn")
+		get_tree().change_scene_to_file("res://Message.tscn")
 
 func _on_video_stream_player_finished():
-	get_tree().change_scene_to_file("res://BattleOfTheAlmaTitle.tscn")
+	get_tree().change_scene_to_file("res://Message.tscn")

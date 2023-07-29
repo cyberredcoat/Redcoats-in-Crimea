@@ -20,3 +20,5 @@ res://scenes/player/RussianInkermanReg.gd
 res://InkermanRuNPC.gd
 res://Message.tscn
 res://Message.gd
+res://Outro.tscn
+res://GodSave.gd
