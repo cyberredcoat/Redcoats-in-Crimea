@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1690631385
+::res://::1690679844
 AlmaTitle.gd::GDScript::-1::1690617235::0::1::::<>Node2D<>::
 BattleOfInkerman.tscn::PackedScene::5620911687865485128::1690630968::0::1::::<><>::res://BattlesScene.gd<>uid://cfg0jawfbyf65::::res://graphics/environment/BattleofInkermanMap.png<>uid://dofde0twb7iyy::::res://scenes/player/RussianInkermanReg.tscn<>uid://c73awthrska8c::::res://scenes/player/BritishGreyReg.tscn<>res://scenes/player/BritishGreyReg.gd<>res://scenes/player/RussianHealthBar.gd<>uid://bifnj2hr3qrhp::::res://graphics/environment/BattleofInkermanFogMap.png<>res://scenes/player/HealthBar.gd<>uid://b6k3akv3lhhla::::res://graphics/player/RedcoatGreyRegAni.png<>uid://bj16fl3dlu87n::::res://scenes/player/RussianRegNPC.tscn<>uid://vqfwtl5qlptn::::res://scenes/player/BritishRegNPC.tscn
 BattleOfInkermanTheBarrier.tscn::PackedScene::1060334883272611959::1690631344::0::1::::<><>::res://BattlesScene.gd<>uid://de35s51q3j32r::::res://graphics/environment/BattleofInkermanTheBarrierMap.png<>uid://dt1gnhuiksaul::::res://scenes/player/RussianBarrierReg.tscn<>uid://c73awthrska8c::::res://scenes/player/BritishGreyReg.tscn<>uid://b586qwwnwjowt::::res://graphics/environment/BattleofInkermanTheBarrierFogMap.png<>res://scenes/player/RussianHealthBar.gd<>res://scenes/player/HealthBar.gd
@@ -25,15 +25,19 @@ Message.tscn::PackedScene::7090990088459419689::1690630968::0::1::::<><>::res://
 Outro.gd::GDScript::-1::1690612599::0::1::::<>Control<>::
 Outro.tscn::PackedScene::6525908059717117168::1690631344::0::1::::<><>::res://Outro.gd<>res://videos/Outro.ogv
 PlayerFire.gd::GDScript::-1::1690565115::0::1::::<>AudioStreamPlayer<>::
-README.md::TextFile::-1::1690628701::0::1::::<><>::
+README.md::TextFile::-1::1690673630::0::1::::<><>::
 TheBarrierTitle.gd::GDScript::-1::1690617219::0::1::::<>Node2D<>::
 TheBarrierTitle.tscn::PackedScene::117469663659864201::1690628608::0::1::::<><>::uid://cyuq882v7htth::::res://graphics/environment/TheBarrierTitle.png<>res://TheBarrierTitle.gd
-::res://AlmaNPC/::1690614770
+::res://AlmaNPC/::1690679745
 AlmaBritishNPC1.gd::GDScript::-1::1690550280::0::1::::<>RefCounted<>::
+BattleOfTheAlmaIntro.ogv::VideoStreamTheora::-1::1690679749::0::1::::<><>::
+GodSave.ogv::VideoStreamTheora::-1::1690679749::0::1::::<><>::
+InkermanInter.ogv::VideoStreamTheora::-1::1690679749::0::1::::<><>::
 NPCBritish1.gd::GDScript::-1::1690612910::0::1::::<>Area2D<>::
 NPCBritish2.gd::GDScript::-1::1690612974::0::1::::<>Area2D<>::
 NPCBritish3.gd::GDScript::-1::1690612980::0::1::::<>Area2D<>::
 NPCBritish4.gd::GDScript::-1::1690614548::0::1::::<>Area2D<>::
+Outro.ogv::VideoStreamTheora::-1::1690679749::0::1::::<><>::
 ::res://graphics/::1690617501
 ::res://graphics/environment/::1690617987
 BattleofInkermanFogMap.png::CompressedTexture2D::2959060144373320289::1690444103::1690444108::1::::<><>::
@@ -54,8 +58,8 @@ Hej_Sokoły.mp3::AudioStreamMP3::1361689858458369376::1690617982::1690618015::1:
 MusketFire.mp3::AudioStreamMP3::3014422210916419308::1690564613::1690564613::1::::<><>::
 Redcoats in Crimea.png::CompressedTexture2D::4289211675541406601::1690617466::1690626103::1::::<><>::
 TheBritishGrenadiers.mp3::AudioStreamMP3::6673686216663269979::1690535430::1690548157::1::::<><>::
-::res://scenes/::1690628705
-::res://scenes/player/::1690631281
+::res://scenes/::1690631526
+::res://scenes/player/::1690631528
 BritishGreyReg.gd::GDScript::-1::1690596683::0::1::::<>CharacterBody2D<>::
 BritishGreyReg.tscn::PackedScene::7076727237936953908::1690620160::0::1::::<><>::res://scenes/player/BritishReg.gd<>uid://b6k3akv3lhhla::::res://graphics/player/RedcoatGreyRegAni.png<>uid://bi7hdf8bm8bjo::::res://music/MusketFire.mp3
 BritishReg.gd::GDScript::-1::1690626876::0::1::::<>CharacterBody2D<>::
@@ -78,9 +82,9 @@ bullet.tscn::PackedScene::8474199179706317569::1690360959::0::1::::<><>::res://s
 ::res://scenes/projectilesEnemy/::1690296376
 bullet.gd::GDScript::-1::1690282320::0::1::::<>Area2D<>::
 bullet.tscn::PackedScene::23901841681632252::1690360959::0::1::::<><>::res://scenes/projectiles/bullet.gd
-::res://videos/::1690630575
-BattleOfTheAlmaIntro.ogv::VideoStreamTheora::-1::1690598243::0::1::::<><>::
-GodSave.ogv::VideoStreamTheora::-1::1690615828::0::1::::<><>::
-InkermanInter.ogv::VideoStreamTheora::-1::1690598226::0::1::::<><>::
+::res://videos/::1690679806
+BattleOfTheAlmaIntro.ogv::VideoStreamTheora::-1::1690566364::0::1::::<><>::
+GodSave.ogv::VideoStreamTheora::-1::1690561828::0::1::::<><>::
+InkermanInter.ogv::VideoStreamTheora::-1::1690544226::0::1::::<><>::
 Message.ogv::VideoStreamTheora::-1::1690630557::0::1::::<><>::
-Outro.ogv::VideoStreamTheora::-1::1690604815::0::1::::<><>::
+Outro.ogv::VideoStreamTheora::-1::1690550814::0::1::::<><>::
